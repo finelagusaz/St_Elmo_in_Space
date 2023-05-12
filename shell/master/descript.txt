@@ -10,6 +10,8 @@ craftmanw,サトウ　Ｍ
 name,Master
 type,shell
 
+seriko.use_self_alpha,1
+
 sakura.balloon.alignment,none
 kero.balloon.alignment,none
 

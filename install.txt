@@ -1,4 +1,4 @@
 charset,UTF-8
 type,ghost
-name,はろーYAYAワールド
-directory,konnoyayame
+name,真空のセントエルモ
+directory,St_Elmo_in_Space

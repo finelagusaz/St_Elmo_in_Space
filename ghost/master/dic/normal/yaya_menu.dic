@@ -1,57 +1,40 @@
 //******************************************************************************
-// YAYA　ゴーストテンプレート
+// あやりりすEX　ゴーストテンプレート
 // メニュー処理辞書
 //******************************************************************************
 
-//******************************************************************************
-//メインメニューの展開
-//
-//AYATEMPLATE.MenuItemの使い方
-//1つめの文字列＝選択肢に表示する文字列
-//2つめの文字列＝選んだときに実行される関数名
-//3つめの文字列＝改行する量　50%刻み　省略すると100%（＝\n）
-//******************************************************************************
+//REV.20121018-1：＠メニュー追加、＠設定に仕様変更
 
 //------------------------------------------------------------------------------
 //メインメニュー展開
 //------------------------------------------------------------------------------
 OpenMenu
 {
-	'\0\s[5]はい、なんでしょうか？'
-	"\0\s[5]%(username)、なんですか？"
-	'\0\s[0]ん‥‥どうしたの？'
-	--
-	AYATEMPLATE.MenuItem("なんか話して","Menu_AITALK",200)
-	--
-	if ( STRLEN(AYATEMPLATE.LastTalk) > 0 ) {
-		AYATEMPLATE.MenuItem("さっきの話は？","Menu_LASTTALK")
-	}
-	--
-	AYATEMPLATE.MenuItem("しゃべり頻度を変えて","Menu_TALKINTERVAL")
-	--
-	AYATEMPLATE.MenuItem("他のゴーストと話す","Menu_GHOSTCOMSTART")
-	--
-	AYATEMPLATE.MenuItem("ややめに話しかける","Menu_COMMUNICATEOPEN")
-	--
-	//スタンプ帳チェック
-	if AYATEMPLATE.IsPluginExist('379E0DA0-131C-11DD-E1AC-90009E101CFE') {
-		AYATEMPLATE.MenuItem("スタンプを押す","Menu_STAMP")
-	}
-	--
-	AYATEMPLATE.MenuItem("なんでもない","Menu_CANCEL",150)
+	//メニューに表示される、途中と最後の空行はわざと入れています。
+	<<"
+	りりす０５：メニューです。
+	＠半分メニュー：なにか話して｜Menu_AITALK
+	＠半分メニュー【STRLEN(SHIORI3FW.LastAITalk) > 0】：さっきの話は？｜Menu_LASTTALK
+	＠半分メニュー：しゃべり頻度を変えて｜Menu_TALKINTERVAL
+	＠半分メニュー：名前を覚えて｜Menu_TELLNAME
+	＠半分メニュー：話しかけてみる｜Menu_USERCOMSTART
+	＠半分メニュー：他のゴーストと話す｜Menu_GHOSTCOMSTART
+	＠改行多めメニュー：あやりりすEXについて｜Menu_ABOUTAYALILITH
+	＠メニュー：AIについて｜Menu_ABOUTAYA
+	＠改行多めメニュー：なんでもない｜Menu_CANCEL
+	">>
 }
 
 //------------------------------------------------------------------------------
 //メニュー選択タイムアウト
 //------------------------------------------------------------------------------
-OnChoiceTimeout
+選択肢時間切れ
 {
-	'\0\s[7]ちゃんと選んでくださいっ！\e'
-	'\0\s[4]ぷー。\w8\1落ち込むんじゃない。\e'
-	'\0\s[4]一定時間が過ぎると。\w8\1キャンセルされるんだよな？\w8\0\n\n自爆します。\w8\1\s[11]\n\nえ！？\w8\0\n\nマック朗が。\w8\1\n\nいや―――――――ッ！！\e'
+	<<"
+	りりす０８：優柔不断な人。代わりに選んであげようかしら。
+	しば１０：それもいいねー。
+	">>
 }
-
-
 //******************************************************************************
 //各項目の処理内容
 //******************************************************************************
@@ -60,53 +43,232 @@ OnChoiceTimeout
 Menu_AITALK
 {
 	//---- 明示的にAIトーク開始を指示
-	OnAiTalk
+	"\![raise,OnAITalk]"
 }
 
 //---- さっきの話は
 Menu_LASTTALK
 {
-	AYATEMPLATE.LastTalk
+	//前のトークになにかある(＝文字列の長さが0ではない）時はそれを喋る
+	if ( STRLEN(SHIORI3FW.LastAITalk) > 0 ) {
+		SHIORI3FW.LastAITalk
+	}
+	else {
+		<<"
+		りりす０４：まだなにも喋ってないよ……
+		">>
+	}
 }
 
 //---- トーク頻度の調整
 Menu_TALKINTERVAL
 {
-	'\0\s[0]どのくらいがいいのかな？'
-	--
-	AYATEMPLATE.MenuItem("うるさいくらい","Menu_TALKMAX",200)
-	--
-	AYATEMPLATE.MenuItem("ふつう","Menu_TALKNORMAL")
-	--
-	AYATEMPLATE.MenuItem("静か","Menu_TALKPOOR")
-	--
-	AYATEMPLATE.MenuItem("黙ってて","Menu_TALKNONE")
-	--
-	AYATEMPLATE.MenuItem("戻る","OpenMenu",150)
+	<<"
+	りりす０５：どのくらいがいいのかな？
+	＠メニュー：うるさいくらい｜Menu_TALKMAX
+	＠メニュー：ふつう｜Menu_TALKNORMAL
+	＠メニュー：静か｜Menu_TALKPOOR
+	＠メニュー：黙ってて｜Menu_TALKNONE
+	＠改行多めメニュー：戻る｜OpenMenu
+	">>
+}
+
+//---- 名前覚えて
+Menu_TELLNAME
+{
+	名前入力起動('メニュー')
+}
+
+//「メニュー」の部分を変えれば、他の反応にできます。
+//たとえば初回起動時に名前を聞きたい場合は、初回起動反応に「名前入力起動('初回')」と書いてみるとか。
+
+名前入力開くメニュー
+{
+	<<"
+	りりす０５：じゃあ、名前を教えてちょうだい。
+	しば１０：敬称はなしでねー。
+	">>
+}
+
+名前入力空欄メニュー
+{
+	if 名前入力空欄カウント <= 1 {
+		<<"
+		りりす０７：名前変える気じゃなかったっけ？
+		しば１０：ななしさんだー。
+		">>
+	}
+	else {
+		<<"
+		りりす０７：そろそろちゃんと教えてよ。
+		しば１０：へそまがりさんだー。
+		">>
+	}
+}
+
+名前入力敬称メニュー
+{
+	<<"
+	りりす０７：敬称はなしでって言ったはずなんだけどな？
+	しば１０：じゃあ、なんてよぶー？
+	">>
+}
+
+名前入力終了メニュー
+{
+	<<"
+	りりす０５：わかった。（ユーザー）ね。
+	しば１０：よろしくー。
+	">>
 }
 
 //---- 文について説明
 Menu_ABOUTAYA
 {
-	'\0\s[0]わたしたちは、汎用DLL「文」の進化版、「YAYA」で制作されてるんだよね？\w8\1聞くなよ。その通りだ。\w9\nＣ言語風の読みやすいスクリプトで、SHIORIやSAORIを作ることが出来るんだ。\w8\0\s[5]\n\n最初は訳分かんないかもしれないけど、噛めば噛むほど面白くなるよ。\w8\s[4]\n多分。\w8\1\n\nおい。\e'
+	<<"
+	りりす０５：私たちは、汎用DLL「文」の進化版である、
+	待ち無しりりす　　：「YAYA」で制作されています。
+	しば１０：うんうん。
+	りりす２０：Ｃ言語風の読みやすいスクリプトで、
+	待ち無しりりす　　：SHIORIやSAORIとして扱うことができるんです。
+	＠改行多めクリック待ちメニュー：戻る｜OpenMenu
+	">>
 }
 
-//---- ややめに話しかける
-Menu_COMMUNICATEOPEN
+//---- あやりりすEXについて
+Menu_ABOUTAYALILITH
 {
-	'\0\s[5]はいっ。\![open,communicatebox]\e'
+	<<"
+	＠メニュー：あやりりすEXとは｜Menu_ABOUTAYALILITHEX
+	＠メニュー：トークを書こう｜Menu_ABOUTAYALILITHDESCRIPTION
+	＠メニュー：トークを再生してみよう｜Menu_ABOUTAYALILITHREPLAY
+	＠メニュー：チェイントークを作ってみよう｜Menu_ABOUTAYALILITHCHAINTALK
+	＠メニュー：キャラクターの名前を変えよう｜Menu_ABOUTAYALILITHCHARACTOR
+	＠改行多めメニュー：どこから改造すればいいの？｜Menu_ABOUTAYARECONSTRUCTION
+	＠改行多めクリック待ちメニュー：戻る｜OpenMenu
+	">>
 }
+
+//---- あやりりすEXとは
+Menu_ABOUTAYALILITHEX
+{
+	<<"
+	りりす０５：「あやりりすEX」は、トークべた書き支援ライブラリ。
+	りりす２０：トークの記述方法「SakuraScript」が難しい。
+	りりす　　：そんな方でも、とっつきやすくしてみました。
+	しば１０：がんばって、かんたんにしてみたよ。
+	りりす０５：よかったら、私たちの辞書を見てください。
+	りりす２０：いろいろ改造して、試してもらうと嬉しいな。
+	＠改行多めメニュー：戻る｜Menu_ABOUTAYALILITH
+	＠メニュー：キャンセル｜Menu_CANCEL
+	">>
+}
+
+//---- トークを書こう
+Menu_ABOUTAYALILITHDESCRIPTION
+{
+	<<"
+	りりす０５：あやりりすEXのトークの書き方は、
+	りりす　　：「yaya_aitalk.txt」や「yaya_mouse.txt」を
+	りりす　　：見ていただくと、だいたいわかると思います。
+	しば１０：うんうん。
+	りりす００：もっと詳しいやり方は、「aya_lilith_ex.dic」の
+	りりす　　：最初にほうに、まとめて書いてあります。
+	りりす２０：分からなくなったら、見てみて下さい。
+	＠改行多めメニュー：戻る｜Menu_ABOUTAYALILITH
+	＠メニュー：キャンセル｜Menu_CANCEL
+	">>
+}
+
+//---- トークを再生してみよう（Sakura Scriptで記述）
+Menu_ABOUTAYALILITHREPLAY
+{
+	<<"
+	りりす００：新しく作ったトークがどのように再現されるか、
+	りりす　　：気になりますよね。
+	改行多めりりす０５：再現したいトークをマウスなどで選択して、
+	りりす　　：あやりりすEXで作られたゴーストにドラッグすると、
+	りりす　　：すぐに確認できるんです。\![open,file,html/index.html]
+	しば１０：これ、すごくべんりだねー。
+	りりす２０：ぜひ、試してみて下さい。
+	＠改行多めメニュー：戻る｜Menu_ABOUTAYALILITH
+	＠メニュー：キャンセル｜Menu_CANCEL
+	">>
+}
+
+//---- チェイントークを作ってみよう
+Menu_ABOUTAYALILITHCHAINTALK
+{
+	<<"
+	りりす００：「あるトークの後に、決まったトークをすること」
+	りりす　　：これをチェイントークと呼んでいます。
+	りりす　　：しりとりなど、同じ話題を続けたいときに便利です。
+	しば１０：うんうん。
+	りりす０５：「yaya_aitalk.txt」の103行目あたりから、
+	りりす　　：チェイントークのサンプルがあります。
+	りりす２０：参考にしてみて下さい。
+	＠改行多めメニュー：戻る｜Menu_ABOUTAYALILITH
+	＠メニュー：キャンセル｜Menu_CANCEL
+	">>
+}
+
+//---- キャラクターの名前を変えよう
+Menu_ABOUTAYALILITHCHARACTOR
+{
+	<<"
+	りりす００：新しいキャラクターの名前が決まったら、
+	りりす　　：あやりりすEXに、教えてあげる必要があります。
+	りりす　　：「aya_lilith_ex_config.dic」を、テキストエディタなどで開いてみてください。
+	しば１０：ひらいてねー
+	りりす２０：開いたら、吹き出しをクリックして次へ行きましょう。
+	クリック待ちりりす０５：16行目「りりす|リリス|[りリすス]」と書いてる場所。
+	りりす００：22行目「しば|シバ|[しシ]」と書いてる場所。
+	りりす　　：ここを、新しい名前に書き換えてください。
+	しば１０：かきかえおわったら、どうするの？
+	りりす０５：「yaya_aitalk.txt」などに書かれているトークの
+	待ち無しりりす　　：「りりす」「しば」という名前も、新しい名前に
+	待ち無しりりす　　：書き換えましょう。
+	改行無しりりす２０：それで完了です。
+	＠改行多めメニュー：戻る｜Menu_ABOUTAYALILITH
+	＠メニュー：キャンセル｜Menu_CANCEL
+	">>
+}
+
+//---- どこから改造すればいいの？
+Menu_ABOUTAYARECONSTRUCTION
+{
+	<<"
+	りりす０２：私たちのどこを改造したらいいのか、ですって？
+	しば１１：えーとね、「ghost」フォルダにはいってる、
+	しば　　：「yaya_aitalk.txt」とか、「yaya_mouse.txt」とかを
+	待ち無ししば　　：かきかえると、すぐじっけんできるよ。
+	りりす０５：トークやマウス反応は、改造した結果が分かりやすく反映されるので、お勧めです。
+	＠改行多めメニュー：戻る｜Menu_ABOUTAYALILITH
+	＠メニュー：キャンセル｜Menu_CANCEL
+	">>
+}
+
+
 
 //---- 他のゴーストと話す
 Menu_GHOSTCOMSTART
 {
-	StartCommunicate
+	他に話しかける
+}
+
+Menu_USERCOMSTART
+{
+	<<"
+	りりす０５：なに？\![open,communicatebox]
+	">>
 }
 
 //---- キャンセルされた
 Menu_CANCEL
 {
-	'\0\s[4]‥\w6‥\w6ぷー。\e'
+	<<"
+	りりす０６：キャンセルね。
+	">>
 }
 
 //---- トーク頻度
@@ -114,111 +276,48 @@ Menu_TALKMAX
 {
 	//---- うるさく話す(15秒間隔)
 	aitalkinterval = 15
-	'\0\s[5]ネタ切れを恐れずがんがん喋る開始っ！\w8\1‥\w5‥\w5待て。\e'
+	<<"
+	りりす０９：このペースだと、すぐネタ切れになるかもね。
+	しば１０：おいらたちサンプルだから、トーク少ないの。
+	">>
 }
 
 Menu_TALKNORMAL
 {
 	//---- ふつうに話す(3分間隔)
 	aitalkinterval = 180
-	'\0\s[6]ごく一般的に３分間隔くらいで喋ってみるテスト。\w8\1テストはローカルで。\w8\0\s[4]\n\n‥\w5‥\w5それはどこのルール？\e'
+	<<"
+	りりす０５：３分間隔くらいで喋ってみるわ。
+	しば１０：ふつう、だね。
+	">>
 }
 
 Menu_TALKPOOR
 {
 	//---- 静かに話す(5分間隔)
 	aitalkinterval = 300
-	'\0\s[5]猫被ります。\w8\1普段から被ってるだろ。\e'
+	<<"
+	りりす００：５分間隔くらいで喋ってみるわ。
+	しば１０：ぽつり、ぽつり。
+	">>
 }
 
 Menu_TALKNONE
 {
 	//---- 話さない
 	aitalkinterval = 0
-	'\0\s[4]‥\w5‥\w5デスクトップアクセサリーとしてのほとんどの機能を封印して淡々とメモリを消費する作業に入ります。\w8\1なんつー言い方だ。\e'
+	<<"
+	りりす０４：黙ります。
+	しば１０：………
+	">>
 }
 
 //---- ヘッドライン
 Menu_HEADLINECANCEL
 {
 	//---- キャンセルされた
-	'\0\s[5]はーい。\e'
+	<<"
+	りりす００：ヘッドライン、キャンセルしました。
+	">>
 }
 
-//---- スタンプ帳
-Menu_STAMP
-{
-	//初期化
-	SHIORI3FW.RegisterTempVar('StampInfo_IsExist','StampInfo_IsNotify','StampInfo_CurrentStampFile','StampInfo_CurrentStampTitle')
-
-	StampInfo_IsExist = 0
-	StampInfo_IsNotify = 0
-
-	//スタンプ帳情報を取った後、raiseでOnStampMenuExecを発生させて下に処理を移す
-	'\![raiseplugin,379E0DA0-131C-11DD-E1AC-90009E101CFE,OnStampInfoCall]\![raise,OnStampMenuExec]'
-}
-
-OnStampInfo
-{
-	//スタンプあるかどうか？
-	StampInfo_IsExist = reference[1]
-	StampInfo_IsNotify = 1
-	StampInfo_CurrentStampFile = ''
-	StampInfo_CurrentStampTitle = ''
-
-	//押している場合は、どのスタンプを押しているか？
-	_stamparray = SPLIT(reference[3],CHR(2))
-
-	StampInfo_Data = _stamparray
-
-	_n = ARRAYSIZE(_stamparray)
-	for _i = 0 ; _i < _n ; _i++ {
-		_stamp = RE_SPLIT(_stamparray[_i],'[\x1,]')//バイト値1かカンマかでぶった切る：互換モード対策
-
-		//ほかで使う場合はここの名前を変えてね
-		if _stamp[0] == 'はろーYAYAわーるど' || _stamp[0] == '紺野ややめ' {
-			StampInfo_CurrentStampFile = _stamp[1]
-			StampInfo_CurrentStampTitle = _stamp[2]
-			break
-		}
-	}
-}
-
-OnStampMenuExec
-{
-	_stamp_type = ''
-
-	//あった
-	if StampInfo_IsExist {
-		if 'ややめ' _in_ StampInfo_CurrentStampTitle {//マック朗におきかえ
-			'\u\s[10]\h\s[2]もう押してあるのに、\w5まだほしいの？\w9\w9\u\s[11]ならおれのスタンプに置き換えだ！\w9\nどうだうれしいだろ！\w9\w9\h\s[4]\n\nなにやってるの\w5…\w5…'
-
-			_stamp_type = 'マック朗'
-		}
-		else {//ややめに置き換え
-			'\h\s[0]\u\s[10]もうおれのスタンプが押してあるぞ？\w9\w9\h\s[5]とりあえずわたしのに戻すねー。'
-
-			_stamp_type = 'ややめ'
-		}
-	}
-	//ない
-	else {
-		'\0\s[0]スタンプ？\w9\w9\n\s[5]はいどうぞ～。\w9\w9\1\s[11]せっかくだから俺はこのスタンプを選ぶぜ！\w9\w9\0\s[4]えーっと。'
-
-		_stamp_type = 'ややめ'
-	}
-	--
-	if _stamp_type == 'ややめ' {
-		//2行目ファイル、3行目タイトル、4行目コメント
-		'\![raiseplugin,379E0DA0-131C-11DD-E1AC-90009E101CFE,OnStampAdd,/
-		ghost/master/stamp/stmp_yym.png,/
-		ややめスタンプ,/
-		紺野ややめが押したスタンプ。服のジッパーの取っ手とデザインが同じ。]'
-	}
-	else {
-		'\![raiseplugin,379E0DA0-131C-11DD-E1AC-90009E101CFE,OnStampAdd,/
-		ghost/master/stamp/stmp_mcr.png,/
-		マック朗スタンプ,/
-		マック朗が押したスタンプ。黒林檎。見た目に反して毒はない…と信じたい。]'
-	}
-}
