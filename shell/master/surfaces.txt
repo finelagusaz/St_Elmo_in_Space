@@ -1,31 +1,87 @@
-charset,UTF-8
+charset,Shift_JIS
 
 descript
 {
-version,1
+	version,1
 }
 
-surface0
+surface0-9
 {
-collision0,85,47,174,97,Head
-collision1,96,97,159,147,Face
-collision2,97,170,159,210,Bust
-collision3,6,56,75,117,Twintail
-collision4,183,55,252,116,Twintail
-
-animation0.interval,sometimes
-animation0.pattern0,overlay,1031,0,93,103
-animation0.pattern1,overlay,1032,50,93,103
-animation0.pattern2,overlay,1033,20,93,103
-animation0.pattern3,overlay,1032,70,93,103
-animation0.pattern4,overlay,1031,30,93,103
-animation0.pattern5,overlay,-1,70,93,103
+	element0,base,surface0.png,0,0
 }
 
+surface0.append
+{
+	element1,overlay,a0.png,0,0
+	element2,overlay,b0.png,0,0
+	element3,overlay,c0.png,0,0
+}
+
+surface1.append
+{
+	element1,overlay,d0.png,0,0
+	element2,overlay,a1.png,0,0
+	element3,overlay,b1.png,0,0
+	element4,overlay,c2.png,0,0
+}
+
+surface2
+{
+	element1,overlay,a6.png,0,0
+	element2,overlay,b2.png,0,0
+	element3,overlay,c3.png,0,0
+}
+
+surface3
+{
+	element1,overlay,a2.png,0,0
+	element2,overlay,b1.png,0,0
+	element3,overlay,c1.png,0,0
+}
+
+surface4
+{
+	element1,overlay,a1.png,0,0
+	element2,overlay,b1.png,0,0
+	element3,overlay,c2.png,0,0
+}
+
+surface5
+{
+	element1,overlay,a5.png,0,0
+	element2,overlay,b0.png,0,0
+	element3,overlay,c3.png,0,0
+}
+
+surface6
+{
+	element1,overlay,a4.png,0,0
+	element2,overlay,b0.png,0,0
+	element3,overlay,c0.png,0,0
+}
+
+surface7
+{
+	element1,overlay,a1.png,0,0
+	element2,overlay,b2.png,0,0
+	element3,overlay,c5.png,0,0
+}
+
+surface8
+{
+	element1,overlay,a1.png,0,0
+	element2,overlay,b1.png,0,0
+	element3,overlay,c1.png,0,0
+}
+
+surface9
+{
+	element1,overlay,d0.png,0,0
+	element2,overlay,a1.png,0,0
+	element3,overlay,b2.png,0,0
+	element4,overlay,c3.png,0,0
+}
 
 surface10
 {
-collision0,78,93,133,122,Face
-
 }
-
