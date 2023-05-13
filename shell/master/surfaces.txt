@@ -20,14 +20,14 @@ surface300-309
 	element0,base,surface0c.png,0,0
 }
 
-surface0,200,300.append
+surface0,200,300
 {
 	element1,overlay,a0.png,0,0
 	element2,overlay,b0.png,0,0
 	element3,overlay,c0.png,0,0
 }
 
-surface1,201,301.append
+surface1,201,301
 {
 	element1,overlay,d0.png,0,0
 	element2,overlay,a1.png,0,0
@@ -35,56 +35,56 @@ surface1,201,301.append
 	element4,overlay,c2.png,0,0
 }
 
-surface2,202,303.append
+surface2,202,302
 {
 	element1,overlay,a6.png,0,0
 	element2,overlay,b2.png,0,0
 	element3,overlay,c3.png,0,0
 }
 
-surface3,203,303.append
+surface3,203,303
 {
 	element1,overlay,a2.png,0,0
 	element2,overlay,b1.png,0,0
 	element3,overlay,c1.png,0,0
 }
 
-surface4,204,304.append
+surface4,204,304
 {
 	element1,overlay,a1.png,0,0
 	element2,overlay,b1.png,0,0
 	element3,overlay,c2.png,0,0
 }
 
-surface5,205,305.append
+surface5,205,305
 {
 	element1,overlay,a5.png,0,0
 	element2,overlay,b0.png,0,0
 	element3,overlay,c3.png,0,0
 }
 
-surface6,206,306.append
+surface6,206,306
 {
 	element1,overlay,a4.png,0,0
 	element2,overlay,b0.png,0,0
 	element3,overlay,c0.png,0,0
 }
 
-surface7,207,307.append
+surface7,207,307
 {
 	element1,overlay,a1.png,0,0
 	element2,overlay,b2.png,0,0
 	element3,overlay,c5.png,0,0
 }
 
-surface8,208,308.append
+surface8,208,308
 {
 	element1,overlay,a1.png,0,0
 	element2,overlay,b1.png,0,0
 	element3,overlay,c1.png,0,0
 }
 
-surface9,209,309.append
+surface9,209,309
 {
 	element1,overlay,d0.png,0,0
 	element2,overlay,a1.png,0,0
