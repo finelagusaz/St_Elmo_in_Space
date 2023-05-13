@@ -20,6 +20,21 @@ surface300-309
 	element0,base,surface0c.png,0,0
 }
 
+surface400-409
+{
+	element0,base,surface0d.png,0,0
+}
+
+surface500-509
+{
+	element0,base,surface0e.png,0,0
+}
+
+surface600-609
+{
+	element0,base,surface0f.png,0,0
+}
+
 surface0,200,300
 {
 	element1,overlay,a0.png,0,0
@@ -92,6 +107,74 @@ surface9,209,309
 	element4,overlay,c3.png,0,0
 }
 
-surface10
+surface400,500,600
 {
+	element1,overlay,a20.png,0,0
+	element2,overlay,b20.png,0,0
+	element3,overlay,c20.png,0,0
+}
+
+surface401,501,601
+{
+	element1,overlay,d1.png,0,0
+	element2,overlay,a21.png,0,0
+	element3,overlay,b21.png,0,0
+	element4,overlay,c22.png,0,0
+}
+
+surface402,502,602
+{
+	element1,overlay,a26.png,0,0
+	element2,overlay,b22.png,0,0
+	element3,overlay,c23.png,0,0
+}
+
+surface403,503,603
+{
+	element1,overlay,a22.png,0,0
+	element2,overlay,b21.png,0,0
+	element3,overlay,c21.png,0,0
+}
+
+surface404,504,604
+{
+	element1,overlay,a21.png,0,0
+	element2,overlay,b21.png,0,0
+	element3,overlay,c22.png,0,0
+}
+
+surface405,505,605
+{
+	element1,overlay,a25.png,0,0
+	element2,overlay,b20.png,0,0
+	element3,overlay,c23.png,0,0
+}
+
+surface406,506,606
+{
+	element1,overlay,a24.png,0,0
+	element2,overlay,b20.png,0,0
+	element3,overlay,c20.png,0,0
+}
+
+surface407,507,607
+{
+	element1,overlay,a21.png,0,0
+	element2,overlay,b22.png,0,0
+	element3,overlay,c25.png,0,0
+}
+
+surface408,508,608
+{
+	element1,overlay,a21.png,0,0
+	element2,overlay,b21.png,0,0
+	element3,overlay,c21.png,0,0
+}
+
+surface409,509,609
+{
+	element1,overlay,d1.png,0,0
+	element2,overlay,a21.png,0,0
+	element3,overlay,b22.png,0,0
+	element4,overlay,c23.png,0,0
 }
