@@ -5,32 +5,32 @@ descript
 	version,1
 }
 
-surface0-9,11
+surface0-9,11,12
 {
 	element0,base,surface0.png,0,0
 }
 
-surface200-209,211
+surface200-209,211,212
 {
 	element0,base,surface0b.png,0,0
 }
 
-surface300-309,311
+surface300-309,311,312
 {
 	element0,base,surface0c.png,0,0
 }
 
-surface400-409,411
+surface400-409,411,412
 {
 	element0,base,surface0d.png,0,0
 }
 
-surface500-509,511
+surface500-509,511,512
 {
 	element0,base,surface0e.png,0,0
 }
 
-surface600-609,611
+surface600-609,611,612
 {
 	element0,base,surface0f.png,0,0
 }
@@ -114,6 +114,13 @@ surface11,211,311
 	element4,overlay,c4.png,0,0
 }
 
+surface12,212,312
+{
+	element2,overlay,a3.png,0,0
+	element3,overlay,b1.png,0,0
+	element4,overlay,c0.png,0,0
+}
+
 surface400,500,600
 {
 	element1,overlay,a20.png,0,0
@@ -191,4 +198,11 @@ surface411,511,611
 	element2,overlay,a28.png,0,0
 	element3,overlay,b20.png,0,0
 	element4,overlay,c24.png,0,0
+}
+
+surface412,512,612
+{
+	element2,overlay,a23.png,0,0
+	element3,overlay,b21.png,0,0
+	element4,overlay,c20.png,0,0
 }
