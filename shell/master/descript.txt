@@ -1,11 +1,8 @@
 charset,UTF-8
 
-//シェル一式のライセンスは以下のようになります。
-//http://creativecommons.org/licenses/by-nc-nd/2.1/jp/
-
-craftman,SATO M
-craftmanurl,http://sgmh.sakura.ne.jp/tcg/
-craftmanw,サトウ　Ｍ
+craftman,Fine Lagusaz
+craftmanurl,https://blankrune.sakura.ne.jp/
+craftmanw,Fine Lagusaz
 
 name,Master
 type,shell
