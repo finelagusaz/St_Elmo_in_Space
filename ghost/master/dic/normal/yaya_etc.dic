@@ -266,8 +266,7 @@ OnVanished
 OnBIFFBegin
 {
 	<<"
-	りりす０５：メールが届いてないかチェックします。
-	しば１０：うんうん。
+	す０：メッセージが届いていないか確認中です。
 	">>
 }
 
@@ -280,17 +279,14 @@ OnBIFFComplete
 	{
 		//---- メールは無かった
 		<<"
-		りりす０４：メールは無かったわ。
-		しば１０：うーん。（ユーザ）、さびしい？
-		りりす０６：そういうこと言わないの。
+		す０：メッセージはありません。
 		">>
 	}
 	else
 	{
 		//---- メールが届いていた
 		<<"
-		りりす０５：%(reference[0])通のメールがあったわ。
-		しば１０：（ユーザ）、見てみたい？
+		す０：%(reference[0])通のメッセージが届いています。
 		">>
 	}
 }
@@ -304,33 +300,32 @@ OnBIFFFailure
 	{
 		//---- タイムアウト
 		<<"
-		りりす０４：いつまで待っても、メールサーバにつながらない。
-		しば１０：どうしたんだろう。
+		す０：タイムアウトが発生しました。
+		時間を空けてから再取得を試みたほうがよいかと。
+		く：エンジニアチームよこすほどでもないね。
 		">>
 	}
 	elseif reference[0] == "kick"
 	{
 		//---- 蹴られた
 		<<"
-		りりす０４：蹴られたわ。
-		しば１０：けられたね。
+		す０：サーバーにキックされました。
+		機械知能体同士の縄張り争いもありますね。
 		">>
 	}
 	elseif reference[0] == "defect"
 	{
 		//---- 設定誤り
 		<<"
-		りりす０４：全然ダメ……
-		りりす０６：メールチェックの設定を、見なおした方がいいね。
-		しば１０：うんうん。
+		す０：設定に問題があります。
+		再設定をお願いします。
 		">>
 	}
 	else
 	{
 		//---- 原因不明
 		<<"
-		りりす０４：原因不明……
-		しば１０：よく分からないけど、しっぱい。
+		す０：原因不明の問題が発生しました。
 		">>
 	}
 }
@@ -346,8 +341,7 @@ OnBIFFFailure
 OnUpdateBegin
 {
 	<<"
-	りりす０５：ネットワーク更新開始よ。
-	しば１０：おいらたち、新しくなるのかな。
+	す０：補給船、ドッキングしました。
 	">>
 }
 
@@ -357,8 +351,7 @@ OnUpdateBegin
 OnUpdateReady
 {
 	<<"
-	りりす００：%(TOINT(reference[0])+1)個のファイルがあったわ。
-	しば１０：がんばって更新だー。
+	す０：%(TOINT(reference[0])+1)個の情報統合対象がありました。
 	">>
 }
 
@@ -371,16 +364,14 @@ OnUpdateComplete
 	{
 		//---- 更新すべきファイルが無かった
 		<<"
-		りりす０４：……更新ファイルなし。
-		しば１０：そういう日もあるー。
+		す２００：今回は何もないようです。
 		">>
 	}
 	else
 	{
 		//---- 実際に更新が完了した
 		<<"
-		りりす０５：更新、無事完了したわ。
-		しば１０：こうしんしゅうりょうー。
+		す２０５：情報統合完了しました。
 		">>
 	}
 }
@@ -391,11 +382,10 @@ OnUpdateComplete
 OnUpdateFailure
 {
 	<<"
-	りりす０４：更新失敗。理由は…
-	りりす【R0 == 'timeout'】：時間切れね。通信できてない。
-	りりす【R0 == 'md5 miss'】：ファイル破損ね。
-	りりす【それ以外】：%(reference[0])だって。
-	しば１０：なんだろうねー。
+	す０：更新に失敗しました。
+	す【R0 == 'timeout'】：タイムアウトが原因です。
+	す【R0 == 'md5 miss'】：ファイル破損が原因です。
+	す【それ以外】：%(reference[0])が原因です。
 	">>
 }
 
@@ -405,7 +395,7 @@ OnUpdateFailure
 OnUpdate.OnDownloadBegin
 {
 	<<"
-	りりす００：ファイル「%(reference[0])」をダウンロードするわ。
+	す０：「%(reference[0])」の情報統合開始。
 	">>
 }
 
@@ -415,7 +405,7 @@ OnUpdate.OnDownloadBegin
 OnUpdate.OnMD5CompareBegin
 {
 	<<"
-	りりす００：ファイルが壊れてないか確認中。
+	す０：対象が正常か確認中。
 	">>
 }
 
@@ -425,7 +415,7 @@ OnUpdate.OnMD5CompareBegin
 OnUpdate.OnMD5CompareComplete
 {
 	<<"
-	りりす０５：ファイルに問題はなさそうね。
+	す０：問題なし。
 	">>
 }
 
@@ -435,7 +425,7 @@ OnUpdate.OnMD5CompareComplete
 OnUpdate.OnMD5CompareFailure
 {
 	<<"
-	りりす０４：どこかでファイルが壊れたようね。
+	す０：異常を検知。
 	">>
 }
 
@@ -449,7 +439,7 @@ OnUpdate.OnMD5CompareFailure
 OnHeadlinesenseBegin
 {
 	<<"
-	りりす００：ヘッドライン「%(reference[0])」を取得中よ。
+	す２００：ヘッドライン「%(reference[0])」を取得中です。
 	">>
 }
 
@@ -459,10 +449,10 @@ OnHeadlinesenseBegin
 OnHeadlinesense.OnFind
 {
 	<<"
-	り００【R2 == "First"||R2 == "First and Last"】：%(reference[0])のヘッドラインよ。
-	り００【R2 == "Next"】：%(reference[0])ヘッドライン、続き。
-	り００【それ以外】：%(reference[0])ヘッドライン、これが最後のページです。
-	り００ｂ２：\_q\n[half]%(reference[3])\_q
+	す０【R2 == "First"||R2 == "First and Last"】：%(reference[0])のヘッドラインです。
+	す０【R2 == "Next"】：%(reference[0])ヘッドライン、続き。
+	す０【それ以外】：%(reference[0])ヘッドライン、これが最後のページです。
+	す０ｂ２：\_q\n[half]%(reference[3])\_q
 	＠半分メニュー【'Last' !_in_ R2】：次のページ|
 	＠半分メニュー【直前分岐】：サイトへ|%(reference[1])
 	＠メニュー【それ以外】：サイトへ|%(reference[1])
@@ -476,7 +466,7 @@ OnHeadlinesense.OnFind
 OnHeadlinesenseComplete
 {
 	<<"
-	り０４：%(reference[0])の更新はないみたいね。
+	す０：%(reference[0])の更新は確認できませんでした。
 	">>
 }
 
@@ -486,11 +476,11 @@ OnHeadlinesenseComplete
 OnHeadlinesenseFailure
 {
 	<<"
-	り０４：ヘッドラインセンスの実行に失敗。理由は…
-	り【R0 == 'can't download'】：ダウンロード失敗ね。
-	り【R0 == 'can't analyze'】：ヘッドライン解析失敗ね。
-	り【それ以外】：謎だわ……
-	しば１０：書き方は__AYA_SYSTEM_FILE__の、__AYA_SYSTEM_LINE__行目あたりを見て。
+	す０：ヘッドラインセンスの実行に失敗しました。
+	理由は
+	す【R0 == 'can't download'】：ダウンロード失敗です。
+	す【R0 == 'can't analyze'】：ヘッドライン解析失敗です。
+	す【それ以外】：未知の事象です。
 	">>
 }
 
@@ -505,8 +495,7 @@ OnHeadlinesenseFailure
 OnUpdatedataCreating
 {
 	<<"
-	りりす００：updates2.dauを作るわ。
-	しば１０：ネットワーク更新に必要なファイルだね。
+	す０：updates2.dauの作成を開始します。
 	">>
 }
 
@@ -516,8 +505,7 @@ OnUpdatedataCreating
 OnUpdatedataCreated
 {
 	<<"
-	りりす０５：updates2.dau作成完了。
-	しば１０：更新するときは、このファイルもアップロードしてね。
+	す０：updates2.dau作成が完了しました。
 	">>
 }
 
@@ -527,8 +515,7 @@ OnUpdatedataCreated
 OnNarCreating
 {
 	<<"
-	りりす００：NARファイルを作るわ。
-	しば１０：あっしゅくー。
+	す０：NARファイルの作成を開始します。
 	">>
 }
 
@@ -538,8 +525,7 @@ OnNarCreating
 OnNarCreated
 {
 	<<"
-	りりす０５：「%(reference[0])」のnarファイル、「%(reference[1])」を作成完了。
-	しば１０：ちゃんとできたー。
+	す０：「%(reference[0])」のnarファイル、「%(reference[1])」の作成が完了しました。
 	">>
 }
 
@@ -554,8 +540,7 @@ OnNarCreated
 OnSNTPBegin
 {
 	<<"
-	りりす００：時計を合わせるわ。
-	しば１０：%(reference[0])に接続するよー。
+	す０：%(reference[0])に接続開始します。
 	">>
 }
 
@@ -575,13 +560,13 @@ SNTPCompare_StrForm
 OnSNTPCompare
 {
 	<<"
-	りりす０５：実行完了。
+	す０：実行完了しました。。
 	＠設定：クイックセクション
-	りりす：修正前 %(SNTPCompare_StrForm(reference[2]))
-	りりす：修正後 %(SNTPCompare_StrForm(reference[1]))
+	す：修正前 %(SNTPCompare_StrForm(reference[2]))
+	す：修正後 %(SNTPCompare_StrForm(reference[1]))
 	＠設定：クイックセクション
-	りりす【TOINT(R3) == 0】：ぴったりだったわ。
-	りりす【それ以外】：%(reference[3])秒のずれを修正したよわ。
+	す【TOINT(R3) == 0】：ずれは確認できませんでした。
+	す【それ以外】：%(reference[3])秒のずれを修正しました。
 	">>
 }
 
@@ -591,7 +576,7 @@ OnSNTPCompare
 OnSNTPFailure
 {
 	<<"
-	りりす０４：時計合わせに失敗。
+	す０：時計合わせに失敗しました。
 	">>
 }
 
@@ -607,26 +592,26 @@ OnSNTPFailure
 OnURLDropping
 {
 	<<"
-	りりす００：%(reference[0])からデータを取得中。
+	す０：%(reference[0])からデータを取得中です。
 	">>
 }
 
 //------------------------------------------------------------------------------
 //スクリーンセーバー実行開始
 //------------------------------------------------------------------------------
-OnScreenSaverStart
-{
-	<<"
-	りりす０５：スクリーンセーバーが起動したようね。
-	">>
-}
+// OnScreenSaverStart
+// {
+// 	<<"
+// 	す０：スクリーンセーバーの起動を検知しました。
+// 	">>
+// }
 
 //------------------------------------------------------------------------------
 //スクリーンセーバー実行終了
 //------------------------------------------------------------------------------
-OnScreenSaverEnd
-{
-	<<"
-	りりす０５：スクリーンセーバー終了。
-	">>
-}
+// OnScreenSaverEnd
+// {
+// 	<<"
+// 	りりす０５：スクリーンセーバー終了。
+// 	">>
+// }
