@@ -22,7 +22,7 @@
 	">>
 }
 
-// Vanish後初回起動
+Vanish後初回起動
 {
 	_vanish_count = TOINT(reference[0])
 	
