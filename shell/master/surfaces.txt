@@ -206,3 +206,40 @@ surface412,512,612
 	element3,overlay,b21.png,0,0
 	element4,overlay,c20.png,0,0
 }
+
+// アニメーション
+// まばたき　通常（半目にならないパターン）
+surface.append0,2,200,202,300,303
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1001,0-800,0,0
+	animation2.pattern1,overlay,1000,50,0,0
+	animation2.pattern2,overlay,1001,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　通常（半目になるパターン）
+surface.append4,7,8,204,207,208,304,307,308
+{
+	animation2.interval,periodic,4
+	animation2.pattern1,overlay,1000,0-800,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　照れ（半目になるパターン）
+surface.append1,9,201,209,301,309
+{
+	animation2.interval,periodic,4
+	animation2.pattern1,overlay,1003,0-800,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　通常（半目そらしパターン）
+surface.append3,203,303
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1002,0-800,0,0
+	animation2.pattern1,overlay,1000,50,0,0
+	animation2.pattern2,overlay,1002,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
