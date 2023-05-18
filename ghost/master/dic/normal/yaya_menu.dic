@@ -13,11 +13,11 @@ OpenMenu
 	//メニューに表示される、途中と最後の空行はわざと入れています。
 	<<"
 	す２０５：メニューです。
-	＠半分メニュー：なにか話して｜Menu_AITALK
-	＠半分メニュー【STRLEN(SHIORI3FW.LastAITalk) > 0】：さっきの話は？｜Menu_LASTTALK
-	＠半分メニュー：しゃべり頻度を変えて｜Menu_TALKINTERVAL
-	＠半分メニュー：話しかけてみる｜Menu_USERCOMSTART
-	＠改行多めメニュー：なんでもない｜Menu_CANCEL
+	＠半分メニュー：雑談｜Menu_AITALK
+	＠半分メニュー【STRLEN(SHIORI3FW.LastAITalk) > 0】：プレイバック｜Menu_LASTTALK
+	＠半分メニュー：喋る頻度を変えて｜Menu_TALKINTERVAL
+	＠半分メニュー：話しかける｜Menu_USERCOMSTART
+	＠改行多めメニュー：キャンセル｜Menu_CANCEL
 	">>
 }
 
