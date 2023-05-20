@@ -1,0 +1,13 @@
+solo_boot_talk
+{
+	<<'
+	す３０５：おはようございます、%username。
+	'>>
+}
+
+solo_end_talk
+{
+	<<'
+	す５０５：おやすみなさい、%username。
+	'>>
+}
