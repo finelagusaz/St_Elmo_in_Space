@@ -23,16 +23,69 @@
 //******************************************************************************
 
 //\0側のなで反応
-なでなで0Head
+なでなで0head
 {
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_head_nade
+	}
+
+	_talk
 }
 
-なでなで0Bust
+なでなで0bust
 {
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
 }
 
-なでなで0Face
+なでなで0skirt
 {
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
+}
+
+なでなで0hand
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
+}
+
+なでなで0leg
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
 }
 
 //******************************************************************************
@@ -40,6 +93,71 @@
 //******************************************************************************
 
 //\0側のつつかれ反応
+ダブルクリック0head
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_head_nade
+	}
+
+	_talk
+}
+
+ダブルクリック0bust
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
+}
+
+ダブルクリック0skirt
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
+}
+
+ダブルクリック0hand
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
+}
+
+ダブルクリック0leg
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		// _talk = 
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
+}
+
 /*
 トーク中ダブルクリック0Head
 {
