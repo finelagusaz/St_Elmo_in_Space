@@ -12,7 +12,8 @@
 
 solo_head_nade
 {
-	if love_flog == 1 {
+	if love_flg == 1 {
+		solo_head_nade_love
 	} else {
 		solo_head_nade_normal
 	}
@@ -33,6 +34,22 @@ solo_head_nade_normal {
 
 	<<"
 	す６０１：悪く……いえ、いいです……。
+	">>
+}
+
+solo_head_nade_love
+{
+	<<"
+	す２０１：もっと、撫でてください。
+	">>
+
+	<<"
+	す３０１：撫でられているだけなのに……。不思議と満たされるんです。
+	">>
+
+	<<"
+	す３０１：落ち着くのに胸の奥がどきどきするんです。
+	改行なしす４０１：責任取ってくれますよね？
 	">>
 }
 
