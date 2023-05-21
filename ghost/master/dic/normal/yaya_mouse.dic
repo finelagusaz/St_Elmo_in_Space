@@ -28,7 +28,20 @@
 	_talk = IARRAY
 
 	if solo_flg == 1 {
-		// _talk = 
+		_talk = solo_head_nade
+	} else {
+		_talk = common_head_nade
+	}
+
+	_talk
+}
+
+なでなで0lip
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		_talk = solo_lip_nade_normal
 	} else {
 		_talk = common_head_nade
 	}
