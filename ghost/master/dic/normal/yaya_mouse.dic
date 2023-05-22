@@ -41,7 +41,7 @@
 	_talk = IARRAY
 
 	if solo_flg == 1 {
-		_talk = solo_lip_nade_normal
+		_talk = solo_lip_nade
 	} else {
 		_talk = common_head_nade
 	}
