@@ -299,7 +299,7 @@ surface.append3,12,203,212,303,312
 // 首傾げ
 //-----------
 // まばたき　通常（半目にならないパターン）
-surface.append400,402,500,502,600,602
+surface.append400,500,600
 {
 	animation2.interval,periodic,4
 	animation2.pattern0,overlay,1011,0-800,0,0
@@ -309,7 +309,7 @@ surface.append400,402,500,502,600,602
 }
 
 // まばたき　通常（半目になるパターン）
-surface.append404,407,408,504,507,508,604,607,608
+surface.append402,404,407,408,502,504,507,508,602,604,607,608
 {
 	animation2.interval,periodic,4
 	animation2.pattern1,overlay,1010,0-800,0,0
