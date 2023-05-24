@@ -30,7 +30,6 @@ solo_normal_talk : array
 	'>>
 }
 
-// TOOD: 好感度フラグの立て方考える
 // 好感度高
 solo_love_talk : array
 {
