@@ -1,15 +1,27 @@
 solo_talk
 {
 	_talk = IARRAY
+	_talk ,= solo_common_talk
 	if love_flg == 1 {
-		_talk = solo_love_talk
+		_talk ,= solo_love_talk
 	} else {
-		_talk = solo_normal_talk
+		_talk ,= solo_normal_talk
 	}
+
 	_talk
 }
 
-// 通常
+// 共通
+solo_common_talk : array
+{
+	// 艦内ラジオとかやってそう
+	<<'
+	す３００：居住区画の静音性には気を配ってるんですよ。機械の駆動音などが響かないように。
+	改行なしす３０５：静かすぎるのもよくないので、BGMや自然環境音を流すようにしてます。リクエストあったらいってくださいね。
+	'>>
+}
+
+// 好感度通常
 solo_normal_talk : array
 {
 	// 二人用のテーブルと椅子、茶器、観葉植物、小さなテラリウムなどが追加
@@ -46,4 +58,8 @@ solo_love_talk : array
 	す３０６：あなたの話していると、不思議と落ち着くんです。ほかの人と同じように話しているだけなのに。
 	'>>
 
+	<<'
+	す３００：気が付いたらあなたの写真が増えてました。
+	改行なしす３０１：あなたのことを無意識のうちに意識している証です……。
+	'>>
 }
