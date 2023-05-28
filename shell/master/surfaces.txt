@@ -303,7 +303,7 @@ surface.append400,500,600
 {
 	animation2.interval,periodic,4
 	animation2.pattern0,overlay,1011,0-800,0,0
-	animation2.pattern1,overlay,1000,50,0,0
+	animation2.pattern1,overlay,1010,50,0,0
 	animation2.pattern2,overlay,1011,50,0,0
 	animation2.pattern3,overlay,-1,50,0,0
 }
