@@ -137,7 +137,7 @@
 	_talk = IARRAY
 
 	if solo_flg == 1 {
-		// _talk = 
+		_talk = solo_skirt_doubleclick
 	} else {
 		_talk = common_deny
 	}
@@ -150,7 +150,7 @@
 	_talk = IARRAY
 
 	if solo_flg == 1 {
-		// _talk = 
+		_talk = solo_hand_doubleclick
 	} else {
 		_talk = common_deny
 	}
@@ -163,7 +163,7 @@
 	_talk = IARRAY
 
 	if solo_flg == 1 {
-		// _talk = 
+		_talk = solo_leg_doubleclick
 	} else {
 		_talk = common_deny
 	}

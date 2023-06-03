@@ -279,9 +279,92 @@ solo_leg_nade_love
 // 頭ダブルクリック
 //---------------------------
 
+solo_head_doubleclick : array
+{
+	if love_flg == 1 {
+		solo_head_doubleclick_love
+	} else {
+		solo_head_doubleclick_normal
+	}
+}
+
+solo_head_doubleclick_love
+{
+	<<'
+	す２０１：おでこをくっつけると……その、顔がすごく、近くて……。
+	'>>
+
+	<<'
+	す３１１：そんなに顔を近づけないでください。
+	'>>
+
+	<<'
+	す４０１：喋ったら唇が触れてしまいそうな距離……。
+	'>>
+}
+
+solo_head_doubleclick_normal
+{
+	<<'
+	す２００：さすがにちょっと、避けちゃいます。
+	'>>
+
+	<<'
+	す２０５：そういうおさわりは禁止です。
+	'>>
+
+	<<'
+	す２０４：小突かないでください。
+	'>>
+}
+
 //---------------------------
 // 唇ダブルクリック
 //---------------------------
+
+solo_lip_doubleclick : array
+{
+	if love_flg == 1 {
+		solo_lip_doubleclick_love
+	} else {
+		solo_lip_doubleclick_normal
+	}
+}
+
+solo_lip_doubleclick_love
+{
+	<<'
+	す３０６：ん……。
+	改行なしす３０１：今度はわたしから
+	改行なしす３０６：――。
+	改行なしす３０１：……少し、恥ずかしいです。
+	'>>
+
+	<<'
+	す４０６：ん、はむ、ちゅ、れろ……。
+	す４０１：はぁ、はぁ、積極的ですね、あなたは。
+	'>>
+
+	<<'
+	す５０６：ちゅ、ん……はむ……はぁ……。
+	す５０１：力、抜けちゃいます。
+	'>>
+}
+
+solo_lip_doubleclick_normal
+{
+	<<'
+	す５００：挨拶のキスなら頬ですよ、もう。
+	'>>
+
+	<<'
+	す３００：キス、ですか？ なら頬にお願いします。
+	'>>
+
+	<<'
+	す１２：唇へのキスはまだはやいですよ。
+	'>>
+}
 
 //---------------------------
 // 胸ダブルクリック
@@ -309,12 +392,6 @@ solo_bust_doubleclick_love
 	す３０１：あん……理性が溶けてしまいそうです。
 	改行なしす６０１：溶けてしまっても、いいですよね？
 	">>
-
-ん……胸、好きなのですか？
-
-ん、あぅん……癖になっちゃいます。
-
-
 }
 
 solo_bust_doubleclick_normal
@@ -336,10 +413,84 @@ solo_bust_doubleclick_normal
 // スカートダブルクリック
 //---------------------------
 
+solo_skirt_doubleclick : array
+{
+	if love_flg == 1 {
+		solo_skirt_doubleclick_love
+	} else {
+		solo_skirt_doubleclick_normal
+	}
+}
+
+solo_skirt_doubleclick_love
+{
+	<<'
+	す１：まだ子どもっぽいことするんですから。……仕方ない人ですね。
+	'>>
+
+	<<'
+	す２０１：めくれないですし、めくっても期待する結果は得られませんからね？
+	'>>
+
+	<<'
+	す２０３：ダメですよ？
+	'>>
+}
+
+solo_skirt_doubleclick_normal
+{
+	<<'
+	す１２：セクハラですよ？
+	'>>
+
+	<<'
+	す２０３：ダメですよ？ まだダメですよ？
+	'>>
+
+	<<'
+	す２０４：生地は皆さんの服と一緒ですよ。
+	'>>
+}
+
+
 //---------------------------
 // 手ダブルクリック
 //---------------------------
 
+solo_hand_doubleclick : array
+{
+	if love_flg == 1 {
+		solo_hand_doubleclick_love
+	} else {
+		solo_hand_nade_normal // 手撫でのNormal流用
+	}
+}
+
+solo_hand_doubleclick_love
+{
+	<<'
+	す２０６：手を重ねているだけなのに……。
+	'>>
+
+	<<'
+	す１：手を放さないでください。……すぐに繋ぎにいきますけど。
+	'>>
+
+	<<'
+	す５０６：あなたの手に触れていると落ち着くんです。
+	'>>
+}
+
 //---------------------------
 // 足ダブルクリック
 //---------------------------
+
+// NOTE: 足撫でと共通
+solo_leg_doubleclick : array
+{
+	if love_flg == 1 {
+		solo_leg_nade_love
+	} else {
+		solo_leg_nade_normal
+	}
+}
