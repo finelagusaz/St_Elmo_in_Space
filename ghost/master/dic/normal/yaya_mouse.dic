@@ -113,7 +113,20 @@
 	if solo_flg == 1 {
 		_talk = solo_head_doubleclick
 	} else {
-		_talk = common_head_nade
+		_talk = common_deny
+	}
+
+	_talk
+}
+
+ダブルクリック0lip
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		_talk = solo_lip_doubleclick
+	} else {
+		_talk = common_deny
 	}
 
 	_talk
