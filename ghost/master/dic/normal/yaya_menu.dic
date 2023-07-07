@@ -188,3 +188,10 @@ Menu_HEADLINECANCEL
 	">>
 }
 
+//---- 閉じる
+Menu_CLOSE
+{
+	<<'
+	す０：はい。
+	'>>
+}
