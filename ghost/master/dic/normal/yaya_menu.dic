@@ -18,6 +18,7 @@ OpenMenu
 	＠半分メニュー：喋る頻度を変えて｜Menu_TALKINTERVAL
 	＠半分メニュー：あだ名覚えて｜Menu_TELLNAME
 	＠半分メニュー：話しかける｜Menu_USERCOMSTART
+	＠半分メニュー：用語集｜Menu_GLOSSARY
 	＠改行多めメニュー：キャンセル｜Menu_CANCEL
 	">>
 }
@@ -61,7 +62,7 @@ Menu_LASTTALK
 Menu_TALKINTERVAL
 {
 	<<"
-	りりす０５：どのくらいがいいのかな？
+	す３００：どれぐらいがよいでしょうか。
 	＠メニュー：うるさいくらい｜Menu_TALKMAX
 	＠メニュー：ふつう｜Menu_TALKNORMAL
 	＠メニュー：静か｜Menu_TALKPOOR
@@ -187,3 +188,10 @@ Menu_HEADLINECANCEL
 	">>
 }
 
+//---- 閉じる
+Menu_CLOSE
+{
+	<<'
+	す０：はい。
+	'>>
+}
