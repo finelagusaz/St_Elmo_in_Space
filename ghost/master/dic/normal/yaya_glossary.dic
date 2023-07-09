@@ -4,12 +4,30 @@ Menu_GLOSSARY
 {
     <<"
     す０：用語集です。
+    ＠メニュー：エアロック｜Glossary_Airlock
+    ＠メニュー：隔壁｜Glossary_Bulkhead
     ＠メニュー：CDC｜Glossary_CDC
     ＠メニュー：スクルド｜Glossary_Sklud
     ＠メニュー：スクルド級1番艦スクルド｜Glossary_Sklud_Class_first_ship
     ＠メニュー：中枢AI｜Glossary_CentralAI
     ＠メニュー：覗き窓｜Glossary_Nozokimado
     ＠改行多めメニュー：閉じる｜Menu_CLOSE
+    ">>
+}
+
+Glossary_Airlock
+{
+    <<"
+    す０：気圧が異なる空間を繋ぐ通路です。外に出るときは減圧し、中に入るときは与圧することができます。急激な気圧や気温の変化によるダメージを減らす効果もあります。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    ">>
+}
+
+Glossary_Bulkhead
+{
+    <<"
+    す３００：艦内の各区画を隔てる壁です。通路を閉鎖する可動式の壁を隔壁と呼ぶことが多いです。火災や気密漏れなどが発生したときに他の区画に影響が及ばないようにする役割があります。隔壁を下ろすときにはアナウンスがありますから、聞き逃さないでくださいね。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
     ">>
 }
 
