@@ -1,27 +1,48 @@
 // 用語集
 
 // TODO:
-// 艦内スーツ
 // テラリウム
-// 機関区画
-// コロニー
 
 Menu_GLOSSARY
 {
     <<"
     す０：用語集です。
-    ＠メニュー：エアロック｜Glossary_Airlock
-    ＠メニュー：隔壁｜Glossary_Bulkhead
-    ＠メニュー：CDC｜Glossary_CDC
-    ＠メニュー：スクルド｜Glossary_Sklud
-    ＠メニュー：スクルド級1番艦スクルド｜Glossary_Sklud_Class_first_ship
-    ＠メニュー：中枢AI｜Glossary_CentralAI
-    ＠メニュー：覗き窓｜Glossary_Nozokimado
-    ＠メニュー：補給船｜Glossary_Supply_ship
+    ＠半分メニュー：艦内スーツ｜Glosssay_ShipboardSuite
+    ＠半分メニュー：機関区画｜Glosssay_EngineUnit
+    ＠半分メニュー：エアロック｜Glossary_Airlock
+    ＠半分メニュー：隔壁｜Glossary_Bulkhead
+    ＠半分メニュー：コロニー｜Glossary_Colony
+    ＠半分メニュー：CDC｜Glossary_CDC
+    ＠半分メニュー：スクルド｜Glossary_Sklud
+    ＠半分メニュー：スクルド級1番艦スクルド｜Glossary_Sklud_Class_first_ship
+    ＠半分メニュー：中枢AI｜Glossary_CentralAI
+    ＠半分メニュー：覗き窓｜Glossary_Nozokimado
+    ＠半分メニュー：補給船｜Glossary_Supply_ship
     ＠改行多めメニュー：閉じる｜Menu_CLOSE
     ">>
 }
 
+// 艦内スーツ
+Glosssay_ShipboardSuite
+{
+    <<"
+    す０：艦内で着用する標準的な服のことです。簡易的な宇宙服にもなり、万が一、気密漏れでも安全区画まで非難できるだけの能力があります。皆さん、スーツ自体にアレンジを加えたり、アウターや靴でお洒落を楽しんでいるようです。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    ">>
+}
+
+// 機関区画
+Glosssay_EngineUnit
+{
+    <<"
+    す０：艦のエンジンのある区画です。エンジニアの方が日々、整備と改善を行っています。
+    改行なしす３００：文字通り、艦の心臓部です。予備の操舵室もここにあります。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    ">>
+
+}
+
+// エアロック
 Glossary_Airlock
 {
     <<"
@@ -30,6 +51,7 @@ Glossary_Airlock
     ">>
 }
 
+// 隔壁
 Glossary_Bulkhead
 {
     <<"
@@ -38,6 +60,17 @@ Glossary_Bulkhead
     ">>
 }
 
+// コロニー
+Glossary_Colony
+{
+    <<"
+    す４００：クルーの皆さんが言うコロニーは衛星軌道上にあるものが多いです。回転させて重力を得るドーナッツ型やシリンダー型、コアに重力発生機関を使った人工天体まで幅広く存在します。
+    改行なしす３００：記録でしか知りませんがシリンダー型は何か風情が感じられます。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    ">>
+}
+
+// CDC
 Glossary_CDC
 {
     <<"
@@ -46,6 +79,7 @@ Glossary_CDC
     ">>
 }
 
+// スクルド
 Glossary_Sklud
 {
     <<"
@@ -55,6 +89,7 @@ Glossary_Sklud
     ">>
 }
 
+// スクルド級1番艦スクルド
 Glossary_Sklud_Class_first_ship
 {
     <<"
@@ -65,6 +100,7 @@ Glossary_Sklud_Class_first_ship
     ">>
 }
 
+// 中枢AI
 Glossary_CentralAI
 {
     <<"
@@ -73,6 +109,7 @@ Glossary_CentralAI
     ">>
 }
 
+// 覗き窓
 Glossary_Nozokimado
 {
     <<'
@@ -82,6 +119,7 @@ Glossary_Nozokimado
     '>>
 }
 
+// 補給船
 Glossary_Supply_ship
 {
     <<'
