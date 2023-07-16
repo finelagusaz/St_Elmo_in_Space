@@ -1,0 +1,74 @@
+type,balloon
+name,Sklud Frame
+id,Sklud Frame
+craftman,Fine Lagusaz
+craftmanw,Fine Lagusaz
+craftmanurl,http://blankrune.sakura.ne.jp/
+
+homeurl,http://blankrune.sakura.ne.jp/update_other/balloon/skuld_frame/
+
+font.color.r,57
+font.color.g,61
+font.color.b,75
+font.height,12
+font.name,MS UI Gothic
+
+origin.x,200
+origin.y,50
+
+validrect.left,0
+validrect.top,12
+validrect.right,0
+validrect.bottom,-18
+
+wordwrappoint.x,0
+wordwrappoint.y,0
+
+cursor.blendmethod,none
+cursor.style,underline 
+
+cursor.brush.color.r,204
+cursor.brush.color.g,204
+cursor.brush.color.b,204
+
+cursor.pen.color.r,144
+cursor.pen.color.g,222
+cursor.pen.color.b,235
+
+cursor.font.color.r,0
+cursor.font.color.g,0
+cursor.font.color.b,0
+
+anchor.font.color.r,204
+anchor.font.color.g,204
+anchor.font.color.b,204
+
+arrow0.x,-12
+arrow0.y,8
+arrow1.x,-12
+arrow1.y,-14
+
+onlinemarker.x,121
+onlinemarker.y,145
+
+number.font.height,10
+number.font.color.r,144
+number.font.color.g,222
+number.font.color.b,235
+number.x,-38
+number.y,-15
+
+sstpmarker.x,28
+sstpmarker.y,-14
+sstpmessage.x,40
+sstpmessage.y,-15
+sstpmessage.font.name,MS UI Cothic
+sstpmessage.font.height,10
+sstpmessage.font.color.r,144
+sstpmessage.font.color.g,222
+sstpmessage.font.color.b,235
+
+communicatebox.x,20
+communicatebox.y,17
+communicatebox.width,355
+communicatebox.height,20

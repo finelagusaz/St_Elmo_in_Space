@@ -2,3 +2,4 @@ charset,UTF-8
 type,ghost
 name,真空のセントエルモ
 directory,St_Elmo_in_Space
+balloon.directory,skuld_frame

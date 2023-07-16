@@ -1,0 +1,4 @@
+type,balloon
+name,Sklud Frame
+directory,skuld_frame
+refresh,1
