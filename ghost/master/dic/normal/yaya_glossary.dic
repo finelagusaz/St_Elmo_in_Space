@@ -5,19 +5,25 @@
 
 Menu_GLOSSARY
 {
+    "b2"
+    --
     <<"
     す０：用語集です。
-    ＠半分メニュー：艦内スーツ｜Glosssay_ShipboardSuite
-    ＠半分メニュー：機関区画｜Glosssay_EngineUnit
     ＠半分メニュー：エアロック｜Glossary_Airlock
     ＠半分メニュー：隔壁｜Glossary_Bulkhead
+    ＠半分メニュー：グラヴィティウィング｜Glossary_GravityWing
+    ＠半分メニュー：艦内スーツ｜Glosssay_ShipboardSuite
+    ＠半分メニュー：機関区画｜Glosssay_EngineUnit
     ＠半分メニュー：コロニー｜Glossary_Colony
     ＠半分メニュー：サバイバルキット｜Glossary_SurvivalKit
     ＠半分メニュー：CDC｜Glossary_CDC
+    ＠半分メニュー：質量兵器｜Glossary_KEW
+    ＠半分メニュー：重力カタパルト｜Glossary_GravityCatapult
     ＠半分メニュー：スクルド｜Glossary_Sklud
     ＠半分メニュー：スクルド級1番艦スクルド｜Glossary_Sklud_Class_first_ship
     ＠半分メニュー：中枢AI｜Glossary_CentralAI
     ＠半分メニュー：覗き窓｜Glossary_Nozokimado
+    ＠半分メニュー：ハードポイント｜Glossary_HardPoint
     ＠半分メニュー：補給船｜Glossary_Supply_ship
     ＠改行多めメニュー：閉じる｜Menu_CLOSE
     ">>
@@ -61,6 +67,15 @@ Glossary_Bulkhead
     ">>
 }
 
+// グラヴィティウィング
+Glossary_GravityWing
+{
+    <<"
+    す３００：翼の形をした重力制御装置です。艦首、艦中央、艦尾の合計3対あります。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    ">>
+}
+
 // コロニー
 Glossary_Colony
 {
@@ -87,6 +102,25 @@ Glossary_CDC
 {
     <<"
     す０：Combat Direction Center、戦闘指揮所のことです。戦闘中の指揮や誘導のためのユニットで、各レーダーや艦載機の情報を集約・分析しています。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    ">>
+}
+
+// 質量兵器
+Glossary_KEW
+{
+    <<"
+    す０：重たい金属の棒を何かしらの手段で高速で射出する武器です。探知と迎撃が難しいのが特徴です。
+    改行なしす２１３：艦内では神からの杖と呼ばれているようです。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    ">>
+}
+
+// 重力カタパルト
+Glossary_GravityCatapult
+{
+    <<"
+    す０：射出対象の前方に重力を作り、その重力で牽引して加速させる機構です。重力制御装置の制御範囲内なら自由に配置できるのが特徴です。
     ＠改行多めメニュー：戻る｜Menu_GLOSSARY
     ">>
 }
@@ -127,6 +161,15 @@ Glossary_Nozokimado
     <<'
     す０：艦内各所にある小さな窓です。艦の状態を確認するためのものや目視で索敵や測位をするためのものがあります。
     改行なしす１４：わたしが何かの原因で行動不能に陥った時の保険です。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// ハードポイント
+Glossary_HardPoint
+{
+    <<'
+    す３００：兵装の取り付け場所です。他の部位より強度が高く、兵装制御用の端子もあります。
     ＠改行多めメニュー：戻る｜Menu_GLOSSARY
     '>>
 }
