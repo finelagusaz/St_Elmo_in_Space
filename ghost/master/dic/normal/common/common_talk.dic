@@ -1,4 +1,4 @@
-common_talk
+common_talk : nonoverlap
 {
 	<<'
 	す０：幼年期は終わったのではないのですか。

@@ -1,4 +1,4 @@
-solo_talk
+solo_talk : nonoverlap
 {
 	_talk = IARRAY
 	_talk ,= solo_common_talk
