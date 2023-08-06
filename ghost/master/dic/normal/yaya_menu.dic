@@ -19,6 +19,8 @@ OpenMenu
 	＠半分メニュー：あだ名覚えて｜Menu_TELLNAME
 	＠半分メニュー：話しかける｜Menu_USERCOMSTART
 	＠半分メニュー：用語集｜Menu_GLOSSARY
+	【solo_flg == 0】＠半分メニュー：スクルドの部屋にいく｜Menu_Solo
+	【solo_flg == 1】＠半分メニュー：外にでる｜Menu_Common
 	＠改行多めメニュー：キャンセル｜Menu_CANCEL
 	">>
 }
@@ -186,6 +188,21 @@ Menu_HEADLINECANCEL
 	<<"
 	す００：ヘッドラインがキャンセルされました。
 	">>
+}
+
+// モード切替
+Menu_Solo
+{
+	solo_flg = 1
+	--
+	"\0\s[0]では、こちらへ。\e"
+}
+
+Menu_Common
+{
+	solo_flg = 0
+	--
+	"\0\s[0]いってらっしゃい。それと、いってきます。\e"
 }
 
 //---- 閉じる
