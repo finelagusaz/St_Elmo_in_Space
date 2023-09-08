@@ -24,8 +24,20 @@ On_portalrootbutton.caption
 //------------------------------------------------------------------------------
 On_sakura.portalsites_EX : array
 {
-	'SSP BUGTRAQ      | http://ssp.shillest.net/         | '
-	'整備班           | http://ms.shillest.net/          | '
+	'SSP BUGTRQ	|	http://ssp.shillest.net/ | '
+	'うさださくら	|	http://usada.sakura.vg/ | '
+	'C.R.O.W.	|	http://crow.aqrs.jp/ | '
+	'-		|	'
+	'うかフィード		|	https://feed.ukagaka.net/ | '
+	'Encyclopedia of 伺か	|	http://dic.sstp.jp/ | '
+	'GHOST TOWN	|	http://ghosttown.mikage.jp/ | '
+	'BALOON TOWN	|	http://ghosttown.mikage.jp/balloontown.html | '
+	'-		|  | '
+	'YAYA	|	http://ms.shillest.net/yaya.xhtml | '
+	'里々/整備班カスタム	|	http://ms.shillest.net/satoriya.xhtml | '
+	'美坂	|	http://lovelove.rabi-en-rose.net/index_misaka.php | '
+	'梨野	|	http://www.junkyard.jp/nasino/index.shtml | '
+	'華和梨	|	http://kawari.sourceforge.net/ | '
 }
 
 //------------------------------------------------------------------------------
@@ -34,7 +46,6 @@ On_sakura.portalsites_EX : array
 On_recommendrootbutton.caption
 {
 	'おすすめ‥‥'
-	'SHIORIコア'
 }
 
 //------------------------------------------------------------------------------
@@ -42,17 +53,18 @@ On_recommendrootbutton.caption
 //------------------------------------------------------------------------------
 On_sakura.recommendsites_EX : array
 {
-	'里々/整備班カスタム | https://github.com/ukatech/satoriya-shiori/wiki | '
-	'華和梨              | https://kawari.github.io/                       | '
+	'GitHubのリポジトリ	|	https://github.com/finelagusaz/St_Elmo_in_Space | '
+	'設定資料	| https://github.com/finelagusaz/St_Elmo_in_Space/blob/main/docs/material.md | '
+	'Feathery Instrument	|	https://blankrune.sakura.ne.jp/ | '
 }
 
 //------------------------------------------------------------------------------
 //kero側おすすめサイトのボタンキャプション
 //------------------------------------------------------------------------------
-On_kero.recommendbuttoncaption
-{
-	'マック朗のおすすめ'
-}
+// On_kero.recommendbuttoncaption
+// {
+// 	'マック朗のおすすめ'
+// }
 
 //------------------------------------------------------------------------------
 //kero側おすすめサイトのリスト
