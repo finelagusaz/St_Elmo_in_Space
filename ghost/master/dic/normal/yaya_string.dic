@@ -22,40 +22,42 @@ On_portalrootbutton.caption
 //------------------------------------------------------------------------------
 //ポータルサイトのリスト
 //------------------------------------------------------------------------------
-On_sakura.portalsites_EX : array
+ポータルサイト
 {
-	'SSP BUGTRQ	|	http://ssp.shillest.net/ | '
-	'うさださくら	|	http://usada.sakura.vg/ | '
-	'C.R.O.W.	|	http://crow.aqrs.jp/ | '
-	'-		|	'
-	'うかフィード		|	https://feed.ukagaka.net/ | '
-	'Encyclopedia of 伺か	|	http://dic.sstp.jp/ | '
-	'GHOST TOWN	|	http://ghosttown.mikage.jp/ | '
-	'BALOON TOWN	|	http://ghosttown.mikage.jp/balloontown.html | '
-	'-		|  | '
-	'YAYA	|	http://ms.shillest.net/yaya.xhtml | '
-	'里々/整備班カスタム	|	http://ms.shillest.net/satoriya.xhtml | '
-	'美坂	|	http://lovelove.rabi-en-rose.net/index_misaka.php | '
-	'梨野	|	http://www.junkyard.jp/nasino/index.shtml | '
-	'華和梨	|	http://kawari.sourceforge.net/ | '
+	<<"
+	SSP BUGTRAQ      | http://ssp.shillest.net/         | 
+	整備班           | http://ms.shillest.net/          | 
+	-              |
+	GHOST/BALLOON TOWN | http://ghosttown.mikage.jp/            | 
+	うかフィード | https://feed.ukagaka.net/            | 
+	">>
 }
+
 
 //------------------------------------------------------------------------------
 //本体側おすすめサイトのボタンキャプション
 //------------------------------------------------------------------------------
 On_recommendrootbutton.caption
 {
-	'おすすめ‥‥'
+	'リンク集'
 }
 
 //------------------------------------------------------------------------------
 //本体側おすすめサイトのリスト
 //------------------------------------------------------------------------------
-On_sakura.recommendsites_EX : array
+おすすめ0
 {
-	'GitHubのリポジトリ	|	https://github.com/finelagusaz/St_Elmo_in_Space | '
-	'設定資料	| https://github.com/finelagusaz/St_Elmo_in_Space/blob/main/docs/material.md | '
-	'Feathery Instrument	|	https://blankrune.sakura.ne.jp/ | '
+	<<"
+	文屋                   | http://emily.shillest.net/ayaya/            | 
+	Disc-2 ゴースト制作    | http://disc2.s56.xrea.com/manual/            | 
+	UKADOC Project  | http://ssp.shillest.net/ukadoc/manual/            | 
+	駄でべろぱの小ネタWiki | http://emily.nanika.jp/specwiki/            |
+	-              |
+	GitHubのリポジトリ	|	https://github.com/finelagusaz/St_Elmo_in_Space |
+	設定資料	| https://github.com/finelagusaz/St_Elmo_in_Space/blob/main/docs/material.md |
+	-              |
+	Feathery Instrument   | https://blankrune.sakura.ne.jp/	              |
+	">>
 }
 
 //------------------------------------------------------------------------------
