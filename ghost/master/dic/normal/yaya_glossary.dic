@@ -10,6 +10,7 @@ Menu_GLOSSARY
     <<"
     す０：用語集です。
     ＠半分メニュー：エアロック｜Glossary_Airlock
+    ＠半分メニュー：オブザーベーションサテライト｜Glossary_ObservationSatellite
     ＠半分メニュー：隔壁｜Glossary_Bulkhead
     ＠半分メニュー：グラヴィティウィング｜Glossary_GravityWing
     ＠半分メニュー：艦内スーツ｜Glosssay_ShipboardSuite
@@ -54,6 +55,15 @@ Glossary_Airlock
 {
     <<"
     す０：気圧が異なる空間を繋ぐ通路です。外に出るときは減圧し、中に入るときは与圧することができます。急激な気圧や気温の変化によるダメージを減らす効果もあります。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    ">>
+}
+
+// オブザーベーションサテライト
+Glossary_ObservationSatellite
+{
+    <<"
+    す０：情報収集衛星のことです。不正な降下が行われてないかなどの監視と資源の調査を行っています。ObSと略されることが多いです。
     ＠改行多めメニュー：戻る｜Menu_GLOSSARY
     ">>
 }
