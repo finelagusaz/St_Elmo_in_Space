@@ -9,23 +9,23 @@ Menu_GLOSSARY
     --
     <<"
     す０：用語集です。
-    ＠半分メニュー：エアロック｜Glossary_Airlock
-    ＠半分メニュー：オブザーベーションサテライト｜Glossary_ObservationSatellite
-    ＠半分メニュー：隔壁｜Glossary_Bulkhead
-    ＠半分メニュー：グラヴィティウィング｜Glossary_GravityWing
-    ＠半分メニュー：艦内スーツ｜Glosssay_ShipboardSuite
-    ＠半分メニュー：機関区画｜Glosssay_EngineUnit
-    ＠半分メニュー：コロニー｜Glossary_Colony
-    ＠半分メニュー：サバイバルキット｜Glossary_SurvivalKit
-    ＠半分メニュー：CDC｜Glossary_CDC
-    ＠半分メニュー：質量兵器｜Glossary_KEW
-    ＠半分メニュー：重力カタパルト｜Glossary_GravityCatapult
-    ＠半分メニュー：スクルド｜Glossary_Sklud
-    ＠半分メニュー：スクルド級1番艦スクルド｜Glossary_Sklud_Class_first_ship
-    ＠半分メニュー：中枢AI｜Glossary_CentralAI
-    ＠半分メニュー：覗き窓｜Glossary_Nozokimado
-    ＠半分メニュー：ハードポイント｜Glossary_HardPoint
-    ＠半分メニュー：補給船｜Glossary_Supply_ship
+    ＠メニュー：エアロック｜Glossary_Airlock
+    ＠メニュー：オブザーベーションサテライト｜Glossary_ObservationSatellite
+    ＠メニュー：隔壁｜Glossary_Bulkhead
+    ＠メニュー：グラヴィティウィング｜Glossary_GravityWing
+    ＠メニュー：艦内スーツ｜Glosssay_ShipboardSuite
+    ＠メニュー：機関区画｜Glosssay_EngineUnit
+    ＠メニュー：コロニー｜Glossary_Colony
+    ＠メニュー：サバイバルキット｜Glossary_SurvivalKit
+    ＠メニュー：CDC｜Glossary_CDC
+    ＠メニュー：質量兵器｜Glossary_KEW
+    ＠メニュー：重力カタパルト｜Glossary_GravityCatapult
+    ＠メニュー：スクルド｜Glossary_Sklud
+    ＠メニュー：スクルド級1番艦スクルド｜Glossary_Sklud_Class_first_ship
+    ＠メニュー：中枢AI｜Glossary_CentralAI
+    ＠メニュー：覗き窓｜Glossary_Nozokimado
+    ＠メニュー：ハードポイント｜Glossary_HardPoint
+    ＠メニュー：補給船｜Glossary_Supply_ship
     ＠改行多めメニュー：閉じる｜Menu_CLOSE
     ">>
 }
