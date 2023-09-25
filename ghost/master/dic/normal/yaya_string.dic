@@ -28,8 +28,10 @@ On_portalrootbutton.caption
 	SSP BUGTRAQ      | http://ssp.shillest.net/         | 
 	整備班           | http://ms.shillest.net/          | 
 	-              |
+	うかフィード | https://feed.ukagaka.net/            |
+	ゴーストキャプターさくら | https://buynowforsale.shillest.net/ghosts/ |
 	GHOST/BALLOON TOWN | http://ghosttown.mikage.jp/            | 
-	うかフィード | https://feed.ukagaka.net/            | 
+	ゴースト回覧板 3rd     | https://jbbs.shitaraba.net/computer/44300/  |
 	">>
 }
 
@@ -48,8 +50,9 @@ On_recommendrootbutton.caption
 おすすめ0
 {
 	<<"
+
+	-               |
 	文屋                   | http://emily.shillest.net/ayaya/            | 
-	Disc-2 ゴースト制作    | http://disc2.s56.xrea.com/manual/            | 
 	UKADOC Project  | http://ssp.shillest.net/ukadoc/manual/            | 
 	駄でべろぱの小ネタWiki | http://emily.nanika.jp/specwiki/            |
 	-              |
