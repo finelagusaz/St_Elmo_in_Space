@@ -1,0 +1,36 @@
+charset,UTF-8
+version,1
+
+group,__disabled
+{
+	1030,__parts
+	1031,__parts
+	1032,__parts
+	1033,__parts
+	1040,__parts
+	1041,__parts
+	1042,__parts
+	1043,__parts
+}
+
+group,紺野ややめ
+{
+	scope,0
+	
+	0,素
+	1,照れ
+	2,驚き
+	3,不安
+	4,はうー
+	5,笑い
+	6,目閉じ
+	7,怒り
+}
+
+group,マック朗
+{
+	scope,1
+	
+	10,素
+	11,刮目
+}
