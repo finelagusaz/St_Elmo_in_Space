@@ -1,0 +1,459 @@
+charset,Shift_JIS
+
+descript
+{
+	version,1
+	collision-sort,descend
+}
+
+surface0-9,11-14
+{
+	element0,base,surface0.png,0,0
+
+	// 口パクアニメーション
+	animation100.interval, talk
+	animation100.pattern0, overlay, 1100, 100, 0, 0
+	animation100.pattern1, overlay, 1101, 100, 0, 0
+	animation100.pattern2, overlay, 1102, 100, 0, 0
+	animation100.pattern3, overlay, 1100, 100, 0, 0
+	animation100.pattern4, overlay, -1, 80, 0, 0
+}
+
+surface200-209,211-214
+{
+	element0,base,surface0b.png,0,0
+
+	// 口パクアニメーション
+	animation100.interval, talk
+	animation100.pattern0, overlay, 1100, 100, 0, 0
+	animation100.pattern1, overlay, 1101, 100, 0, 0
+	animation100.pattern2, overlay, 1102, 100, 0, 0
+	animation100.pattern3, overlay, 1100, 100, 0, 0
+	animation100.pattern4, overlay, -1, 80, 0, 0
+}
+
+surface300-309,311-314
+{
+	element0,base,surface0c.png,0,0
+
+	// 口パクアニメーション
+	animation100.interval, talk
+	animation100.pattern0, overlay, 1100, 100, 0, 0
+	animation100.pattern1, overlay, 1101, 100, 0, 0
+	animation100.pattern2, overlay, 1102, 100, 0, 0
+	animation100.pattern3, overlay, 1100, 100, 0, 0
+	animation100.pattern4, overlay, -1, 80, 0, 0
+}
+
+surface400-409,411-414
+{
+	element0,base,surface0d.png,0,0
+
+	// 口パクアニメーション
+	animation100.interval, talk
+	animation100.pattern0, overlay, 1110, 100, 0, 0
+	animation100.pattern1, overlay, 1111, 100, 0, 0
+	animation100.pattern2, overlay, 1112, 100, 0, 0
+	animation100.pattern3, overlay, 1110, 100, 0, 0
+	animation100.pattern4, overlay, -1, 80, 0, 0
+}
+
+surface500-509,511-514
+{
+	element0,base,surface0e.png,0,0
+
+	// 口パクアニメーション
+	animation100.interval, talk
+	animation100.pattern0, overlay, 1110, 100, 0, 0
+	animation100.pattern1, overlay, 1111, 100, 0, 0
+	animation100.pattern2, overlay, 1112, 100, 0, 0
+	animation100.pattern3, overlay, 1110, 100, 0, 0
+	animation100.pattern4, overlay, -1, 80, 0, 0
+}
+
+surface600-609,611-614
+{
+	element0,base,surface0f.png,0,0
+
+	// 口パクアニメーション
+	animation100.interval, talk
+	animation100.pattern0, overlay, 1110, 100, 0, 0
+	animation100.pattern1, overlay, 1111, 100, 0, 0
+	animation100.pattern2, overlay, 1112, 100, 0, 0
+	animation100.pattern3, overlay, 1110, 100, 0, 0
+	animation100.pattern4, overlay, -1, 80, 0, 0
+}
+
+surface0,200,300
+{
+	element1,overlay,a0.png,0,0
+	element2,overlay,b0.png,0,0
+	element3,overlay,c0.png,0,0
+}
+
+surface1,201,301
+{
+	element1,overlay,d0.png,0,0
+	element2,overlay,a1.png,0,0
+	element3,overlay,b1.png,0,0
+	element4,overlay,c2.png,0,0
+}
+
+surface2,202,302
+{
+	element1,overlay,a6.png,0,0
+	element2,overlay,b2.png,0,0
+	element3,overlay,c3.png,0,0
+}
+
+surface3,203,303
+{
+	element1,overlay,a2.png,0,0
+	element2,overlay,b1.png,0,0
+	element3,overlay,c1.png,0,0
+}
+
+surface4,204,304
+{
+	element1,overlay,a1.png,0,0
+	element2,overlay,b1.png,0,0
+	element3,overlay,c2.png,0,0
+}
+
+surface5,205,305
+{
+	element1,overlay,a5.png,0,0
+	element2,overlay,b0.png,0,0
+	element3,overlay,c3.png,0,0
+}
+
+surface6,206,306
+{
+	element1,overlay,a4.png,0,0
+	element2,overlay,b0.png,0,0
+	element3,overlay,c0.png,0,0
+}
+
+surface7,207,307
+{
+	element1,overlay,a1.png,0,0
+	element2,overlay,b2.png,0,0
+	element3,overlay,c5.png,0,0
+}
+
+surface8,208,308
+{
+	element1,overlay,a1.png,0,0
+	element2,overlay,b1.png,0,0
+	element3,overlay,c1.png,0,0
+}
+
+surface9,209,309
+{
+	element1,overlay,d0.png,0,0
+	element2,overlay,a1.png,0,0
+	element3,overlay,b2.png,0,0
+	element4,overlay,c3.png,0,0
+}
+
+surface11,211,311
+{
+	element2,overlay,a8.png,0,0
+	element3,overlay,b0.png,0,0
+	element4,overlay,c4.png,0,0
+}
+
+surface12,212,312
+{
+	element2,overlay,a3.png,0,0
+	element3,overlay,b1.png,0,0
+	element4,overlay,c0.png,0,0
+}
+
+surface13,213,313
+{
+	element1,overlay,d0.png,0,0
+	element2,overlay,a0.png,0,0
+	element3,overlay,b1.png,0,0
+	element4,overlay,c0.png,0,0
+}
+
+surface14,214,314
+{
+	element1,overlay,d0.png,0,0
+	element2,overlay,a3.png,0,0
+	element3,overlay,b1.png,0,0
+	element4,overlay,c2.png,0,0
+}
+
+surface400,500,600
+{
+	element1,overlay,a20.png,0,0
+	element2,overlay,b20.png,0,0
+	element3,overlay,c20.png,0,0
+}
+
+surface401,501,601
+{
+	element1,overlay,d1.png,0,0
+	element2,overlay,a21.png,0,0
+	element3,overlay,b21.png,0,0
+	element4,overlay,c22.png,0,0
+}
+
+surface402,502,602
+{
+	element1,overlay,a26.png,0,0
+	element2,overlay,b22.png,0,0
+	element3,overlay,c23.png,0,0
+}
+
+surface403,503,603
+{
+	element1,overlay,a22.png,0,0
+	element2,overlay,b21.png,0,0
+	element3,overlay,c21.png,0,0
+}
+
+surface404,504,604
+{
+	element1,overlay,a21.png,0,0
+	element2,overlay,b21.png,0,0
+	element3,overlay,c22.png,0,0
+}
+
+surface405,505,605
+{
+	element1,overlay,a25.png,0,0
+	element2,overlay,b20.png,0,0
+	element3,overlay,c23.png,0,0
+}
+
+surface406,506,606
+{
+	element1,overlay,a24.png,0,0
+	element2,overlay,b20.png,0,0
+	element3,overlay,c20.png,0,0
+}
+
+surface407,507,607
+{
+	element1,overlay,a21.png,0,0
+	element2,overlay,b22.png,0,0
+	element3,overlay,c25.png,0,0
+}
+
+surface408,508,608
+{
+	element1,overlay,a21.png,0,0
+	element2,overlay,b21.png,0,0
+	element3,overlay,c21.png,0,0
+}
+
+surface409,509,609
+{
+	element1,overlay,d1.png,0,0
+	element2,overlay,a21.png,0,0
+	element3,overlay,b22.png,0,0
+	element4,overlay,c23.png,0,0
+}
+
+surface411,511,611
+{
+	element2,overlay,a28.png,0,0
+	element3,overlay,b20.png,0,0
+	element4,overlay,c24.png,0,0
+}
+
+surface412,512,612
+{
+	element2,overlay,a23.png,0,0
+	element3,overlay,b21.png,0,0
+	element4,overlay,c20.png,0,0
+}
+
+surface413,513,613
+{
+	element1,overlay,d1.png,0,0
+	element2,overlay,a20.png,0,0
+	element3,overlay,b21.png,0,0
+	element4,overlay,c20.png,0,0
+}
+
+surface414,514,614
+{
+	element1,overlay,d1.png,0,0
+	element2,overlay,a23.png,0,0
+	element3,overlay,b21.png,0,0
+	element4,overlay,c22.png,0,0
+}
+
+// アニメーション
+//-----------
+// 通常
+//-----------
+// まばたき　通常（半目にならないパターン）
+surface.append0,2,200,202,300,302
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1001,0-800,0,0
+	animation2.pattern1,overlay,1000,50,0,0
+	animation2.pattern2,overlay,1001,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　通常（半目になるパターン）
+surface.append4,7,8,204,207,208,304,307,308
+{
+	animation2.interval,periodic,4
+	animation2.pattern1,overlay,1000,0-800,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　照れ（半目になるパターン）
+surface.append1,9,201,209,301,309
+{
+	animation2.interval,periodic,4
+	animation2.pattern1,overlay,1003,0-800,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　照れ（半目にならないパターン）
+surface.append13,213,313
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1004,0-800,0,0
+	animation2.pattern1,overlay,1003,50,0,0
+	animation2.pattern2,overlay,1004,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　通常（半目そらしパターン）
+surface.append3,12,203,212,303,312
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1002,0-800,0,0
+	animation2.pattern1,overlay,1000,50,0,0
+	animation2.pattern2,overlay,1002,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　照れ（半目そらしパターン）
+surface.append14,214,314
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1005,0-800,0,0
+	animation2.pattern1,overlay,1003,50,0,0
+	animation2.pattern2,overlay,1005,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+//-----------
+// 首傾げ
+//-----------
+// まばたき　通常（半目にならないパターン）
+surface.append400,500,600
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1011,0-800,0,0
+	animation2.pattern1,overlay,1010,50,0,0
+	animation2.pattern2,overlay,1011,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　通常（半目になるパターン）
+surface.append402,404,407,408,502,504,507,508,602,604,607,608
+{
+	animation2.interval,periodic,4
+	animation2.pattern1,overlay,1010,0-800,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　照れ（半目にならないパターン）
+surface.append413,513,613
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1014,0-800,0,0
+	animation2.pattern1,overlay,1013,50,0,0
+	animation2.pattern2,overlay,1014,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　照れ（半目になるパターン）
+surface.append401,409,501,509,601,609
+{
+	animation2.interval,periodic,4
+	animation2.pattern1,overlay,1013,0-800,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　通常（半目そらしパターン）
+surface.append403,412,503,512,603,612
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1012,0-800,0,0
+	animation2.pattern1,overlay,1010,50,0,0
+	animation2.pattern2,overlay,1012,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// まばたき　照れ（半目そらしパターン）
+surface.append414,514,614
+{
+	animation2.interval,periodic,4
+	animation2.pattern0,overlay,1015,0-800,0,0
+	animation2.pattern1,overlay,1013,50,0,0
+	animation2.pattern2,overlay,1015,50,0,0
+	animation2.pattern3,overlay,-1,50,0,0
+}
+
+// 当たり判定
+// 全体共通
+surface.append0-9,11-14,200-209,211-214,300-309,311-314,400-409,411-414,500-509,511-514,600-609,611-614
+{
+	// 足
+	collisionex0,leg,polygon,273,627,297,758,275,818,280,891,289,1082,322,1093,422,1092,458,1091,469,1044,462,940,451,766,473,654,472,628,385,633,360,633,286,625
+	// スカート
+	collisionex1,skirt,polygon,287,500,321,513,353,520,389,522,413,516,437,507,451,504,467,518,476,542,501,576,507,601,489,618,425,627,372,624,319,627,286,621,257,612,244,605,256,555
+	// 胸
+	collisionex5,bust,polygon,330,349,347,354,364,359,377,365,400,358,415,349,424,353,430,370,438,374,438,389,434,402,432,415,417,423,404,425,386,425,370,419,348,427,331,427,314,423,303,410,301,391,308,370,318,359
+}
+
+// 通常共通
+surface.append0-9,11-14,200-209,211-214,300-309,311-314
+{
+	// 唇
+	collision6,359,254,385,268,lip
+	// 頭
+	collisionex7,head,polygon,342,114,331,123,321,133,308,140,296,153,289,172,291,185,297,189,330,189,346,180,365,173,382,172,394,172,404,177,417,182,436,183,445,185,458,183,452,163,441,146,419,130,399,117,372,108
+}
+
+// 通常
+surface.append0-9,11-14,400-409,411-414
+{
+	// 手
+	collisionex2,hand,polygon,235,547,227,560,216,569,214,582,215,597,213,611,226,627,232,629,240,615,231,606,246,578,252,551
+	collisionex3,hand,polygon,498,551,509,568,515,586,511,610,495,614,512,603,501,576,488,555
+}
+
+// 通常・手を重ねる / 首傾げ・手を重ねる
+surface.append200-209,211-214,500-509,511-514
+{
+	// 手
+	collisionex2,hand,polygon,338,552,352,542,359,537,366,537,366,545,378,539,387,547,394,556,394,565,395,572,390,581,383,611,376,620,368,625,361,632,348,597,347,575
+}
+// 通常・首元に手をやる / 首傾げ・首元に手をやる
+surface.append300-309,311-314,600-609,611-614
+{
+	// 手
+	collisionex2,hand,polygon,340,286,333,293,326,301,316,319,312,327,321,327,327,331,334,333,344,332,349,322,356,319,365,319,365,309,359,301,357,292,348,280
+}
+
+// 首傾げ共通
+surface.append400-409,411-414,500-509,511-514,600-609,611-614
+{
+	// 唇
+	collisionex6,lip,polygon,351,255,381,250,385,266,356,271
+	// 頭
+	collisionex7,head,polygon,313,122,303,130,289,143,282,161,275,182,273,202,274,210,286,202,304,195,319,183,335,176,343,176,353,176,373,174,387,174,422,181,432,182,439,174,438,163,415,133,374,113,342,107
+}
