@@ -22,6 +22,7 @@ Menu_GLOSSARY
     ＠メニュー：重力カタパルト｜Glossary_GravityCatapult
     ＠メニュー：スクルド｜Glossary_Sklud
     ＠メニュー：スクルド級1番艦スクルド｜Glossary_Sklud_Class_first_ship
+    ＠メニュー：艦載機｜Glossary_Ship_Aeroplane
     ＠メニュー：中枢AI｜Glossary_CentralAI
     ＠メニュー：覗き窓｜Glossary_Nozokimado
     ＠メニュー：ハードポイント｜Glossary_HardPoint
@@ -190,6 +191,15 @@ Glossary_Supply_ship
     <<'
     す３００：定期的に情報と物資を運ぶ無人船です。この艦の活動宙域は通信範囲外にあるため、情報のやり取りも物理的な媒体に頼っています。物資も艦の維持に必要な部品、食料品、消耗品なども積載されています。
     改行なしす３０５：わたしたちにとって艦と外を繋ぐ貴重な機会です。補給船が来るときは艦長含めてちょっと浮き足立ってます。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// 艦載機
+Glossary_Ship_Aeroplane
+{
+    <<'
+    す３００：全領域戦闘機「シルフィード」80機、警戒管制機「ヘイムダル」10機が稼働中です。どの子もハードとソフトで個人や任務に最適化されているので個性が出てますよ。
     ＠改行多めメニュー：戻る｜Menu_GLOSSARY
     '>>
 }
