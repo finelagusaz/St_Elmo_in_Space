@@ -184,6 +184,19 @@
 	_talk
 }
 
+ダブルクリック0shoulder
+{
+	_talk = IARRAY
+
+	if solo_flg == 1 {
+		_talk = solo_shoulder_extra
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
+}
+
 /*
 トーク中ダブルクリック0Head
 {
@@ -259,4 +272,15 @@
 }
 */
 
+ころころ下0shoulder
+{
+	_talk = IARRAY
 
+	if solo_flg == 1 {
+		_talk = solo_shoulder_extra
+	} else {
+		_talk = common_deny
+	}
+
+	_talk
+}

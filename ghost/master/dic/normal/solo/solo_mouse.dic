@@ -8,6 +8,7 @@
 	skirt
 	hand
 	leg
+	shoulder
 */
 
 //----------------------------
@@ -492,5 +493,53 @@ solo_leg_doubleclick : array
 		solo_leg_nade_love
 	} else {
 		solo_leg_nade_normal
+	}
+}
+
+//-------------------------
+// 抱き寄せ
+//-------------------------
+// NOTE: ホイール・ダブルクリック共通
+
+// 好感度・高
+solo_shoulder_extra_love
+{
+	<<'
+	す１３：こんなに近いと、ドキドキしちゃいます。……伝わって、いますよね。
+	'>>
+
+	<<'
+	す１４：もっと、こうしていたいです。\w9\w9
+	改行なしす１３：だって、\w9こんなにあなたが感じられるから。
+	'>>
+
+	<<'
+	す５０１：あなたにもっと触れてもらいたい、と思ってしまうわたしは悪い子なのでしょうか。
+	'>>
+}
+
+// 好感度・通常
+solo_shoulder_extra_normal
+{
+	<<'
+	す４：あ、あの……？
+	'>>
+
+	<<'
+	す２０１：……。
+	'>>
+
+	<<'
+	す２１３：……あの、離して、もえらえませんか？
+	'>>
+}
+
+// 好感度判定
+solo_shoulder_extra : array
+{
+	if love_flg == 1 {
+		solo_shoulder_extra_love
+	} else {
+		solo_shoulder_extra_normal
 	}
 }
