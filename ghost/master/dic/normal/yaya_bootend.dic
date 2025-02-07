@@ -93,6 +93,20 @@ OnFirstBootInputUsername
 	}
 }
 
+// バレンタインデー
+2月14日に起動
+{
+	if solo_flg == 1 {
+		if love_flg == 1 {
+			solo_love_valentaine_talk
+		} else {
+			solo_normal_valentaine_talk
+		}
+	} else {
+		common_valentine_talk
+	}
+}
+
 //******************************************************************************
 //終了 OnClose
 //******************************************************************************
