@@ -20,7 +20,7 @@ solo_end_talk
 	'>>
 }
 
-solo_love_valentaine_talk
+solo_normal_valentaine_talk
 {
 	<<'
 	す２００：はい、バレンタインのチョコレートです。
@@ -29,7 +29,7 @@ solo_love_valentaine_talk
 	'>>
 }
 
-solo_normal_valentaine_talk
+solo_love_valentaine_talk
 {
 	<<'
 	す４００：今日が何の日か知っていますか？
