@@ -87,18 +87,19 @@ OnFirstBootInputUsername
 	}
 }
 
-// バレンタインデー
-起動2月14日
+起動クルーたちとバレンタイン
 {
-	if solo_flg == 1 {
-		if love_flg == 1 {
-			solo_love_valentaine_talk
-		} else {
-			solo_normal_valentaine_talk
-		}
-	} else {
-		common_valentine_talk
-	}
+	common_valentine_talk
+}
+
+起動義理バレンタイン
+{
+	solo_normal_valentaine_talk
+}
+
+起動本命バレンタイン
+{
+	solo_love_valentaine_talk
 }
 
 //******************************************************************************
