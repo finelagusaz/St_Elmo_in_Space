@@ -72,15 +72,9 @@ OnFirstBootInputUsername
 //******************************************************************************
 /*
 	NOTE: 特定条件での起動
-	10月上旬に起動
-	10月13日に起動
-	平日の朝に起動
-	土曜に起動
-	秋に起動
-	秋の朝に起動
-	朝に起動
-	昼食時に起動
-	夜に起動
+	記述法は
+	\ghost\master\dic\system\aya_lilith\aya_lilith.dic
+	を参照
 */
 
 //該当がない時は「起動」でトークします。
@@ -91,6 +85,21 @@ OnFirstBootInputUsername
 	} else {
 		common_boot_talk
 	}
+}
+
+起動クルーたちとバレンタイン
+{
+	common_valentine_talk
+}
+
+起動義理バレンタイン
+{
+	solo_normal_valentaine_talk
+}
+
+起動本命バレンタイン
+{
+	solo_love_valentaine_talk
 }
 
 //******************************************************************************
