@@ -89,16 +89,19 @@ OnFirstBootInputUsername
 
 起動クルーたちとバレンタイン
 {
+	common_valentine_flag = 1
 	common_valentine_talk
 }
 
 起動義理バレンタイン
 {
+	solo_normal_valentaine_flag = 1
 	solo_normal_valentaine_talk
 }
 
 起動本命バレンタイン
 {
+	solo_love_valentaine_flag = 1
 	solo_love_valentaine_talk
 }
 
