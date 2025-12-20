@@ -87,6 +87,7 @@ OnFirstBootInputUsername
 	}
 }
 
+// バレンタイン
 起動クルーたちとバレンタイン
 {
 	common_valentine_flag = 1
@@ -103,6 +104,22 @@ OnFirstBootInputUsername
 {
 	solo_love_valentaine_flag = 1
 	solo_love_valentaine_talk
+}
+
+// クリスマス
+起動クルーたちとクリスマス
+{
+	common_christmas_talk
+}
+
+起動二人きりのクリスマス
+{
+	solo_normal_christmas_talk
+}
+
+起動二人きりの特別なクリスマス
+{
+	solo_love_christmas_talk
 }
 
 //******************************************************************************
