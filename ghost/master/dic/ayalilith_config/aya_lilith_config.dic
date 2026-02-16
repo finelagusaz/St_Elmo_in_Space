@@ -55,6 +55,20 @@
 			}
 		}
 	}
+	elseif month == 3 && day == 14
+	{
+		case _status {
+			when 'crew' {
+				'クルーたちとホワイトデー'
+			}
+			when 'solo_normal' {
+				'義理ホワイトデー'
+			}
+			when 'solo_love' {
+				'本命ホワイトデー'
+			}
+		}
+	}
 	elseif month ==12 && day == 25
 	{
 	{
