@@ -106,22 +106,6 @@ OnFirstBootInputUsername
 	solo_love_valentaine_talk
 }
 
-// ホワイトデー
-起動クルーたちとホワイトデー
-{
-	common_whiteday_talk
-}
-
-起動義理ホワイトデー
-{
-	solo_normal_whiteday_talk
-}
-
-起動本命ホワイトデー
-{
-	solo_love_whiteday_talk
-}
-
 // クリスマス
 起動クルーたちとクリスマス
 {
