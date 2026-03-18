@@ -20,11 +20,11 @@ OnSystemLoad.Glossary : void
 	glossary_entries ,= '隔壁'
 	glossary_entries ,= 'Glossary_Bulkhead'
 	glossary_entries ,= '艦内スーツ'
-	glossary_entries ,= 'Glosssay_ShipboardSuite'
+	glossary_entries ,= 'Glossary_ShipboardSuite'
 	glossary_entries ,= '艦載機'
 	glossary_entries ,= 'Glossary_Ship_Aeroplane'
 	glossary_entries ,= '機関区画'
-	glossary_entries ,= 'Glosssay_EngineUnit'
+	glossary_entries ,= 'Glossary_EngineUnit'
 	glossary_entries ,= 'グラヴィティウィング'
 	glossary_entries ,= 'Glossary_GravityWing'
 	glossary_entries ,= 'グラヴィティシールド'
@@ -135,7 +135,7 @@ Glossary_PrevPage
 }
 
 // 艦内スーツ
-Glosssay_ShipboardSuite
+Glossary_ShipboardSuite
 {
     <<"
     す０：艦内で着用する標準的な服のことです。気密漏れが起きたときなどには簡易宇宙服になります。皆さん、スーツ自体にアレンジを加えたり、アウターや靴でお洒落を楽しんでいるようです。
@@ -144,7 +144,7 @@ Glosssay_ShipboardSuite
 }
 
 // 機関区画
-Glosssay_EngineUnit
+Glossary_EngineUnit
 {
     <<"
     す０：艦のエンジンのある区画です。エンジニアの方が日々、整備と改善を行っています。
