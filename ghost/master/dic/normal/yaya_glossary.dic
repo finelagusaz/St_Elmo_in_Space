@@ -1,11 +1,10 @@
 // 用語集
 
-// 1ページあたりの表示項目数
-GLOSSARY_PER_PAGE = 18
-
 // 用語集データの初期化
 OnSystemLoad.Glossary : void
 {
+	// 1ページあたりの表示項目数
+	GLOSSARY_PER_PAGE = 18
 	glossary_page = 0
 	glossary_entries = IARRAY
 	// 五十音順: ラベル, 関数名 の交互配列
