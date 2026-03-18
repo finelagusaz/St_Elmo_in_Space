@@ -1,38 +1,140 @@
 // 用語集
 
-// TODO:
-// テラリウム
+// 用語集データの初期化
+OnSystemLoad.Glossary : void
+{
+	// 1ページあたりの表示項目数
+	GLOSSARY_PER_PAGE = 18
+	glossary_page = 0
+	glossary_entries = IARRAY
+	// 五十音順: ラベル, 関数名 の交互配列
+	// ア行
+	glossary_entries ,= 'エアロック'
+	glossary_entries ,= 'Glossary_Airlock'
+	glossary_entries ,= 'オブザーベーションサテライト'
+	glossary_entries ,= 'Glossary_ObservationSatellite'
+	// カ行
+	glossary_entries ,= '格納庫'
+	glossary_entries ,= 'Glossary_Hangar'
+	glossary_entries ,= '隔壁'
+	glossary_entries ,= 'Glossary_Bulkhead'
+	glossary_entries ,= '艦内スーツ'
+	glossary_entries ,= 'Glossary_ShipboardSuite'
+	glossary_entries ,= '艦載機'
+	glossary_entries ,= 'Glossary_Ship_Aeroplane'
+	glossary_entries ,= '機関区画'
+	glossary_entries ,= 'Glossary_EngineUnit'
+	glossary_entries ,= 'グラヴィティウィング'
+	glossary_entries ,= 'Glossary_GravityWing'
+	glossary_entries ,= 'グラヴィティシールド'
+	glossary_entries ,= 'Glossary_GravityShield'
+	glossary_entries ,= '工場区画'
+	glossary_entries ,= 'Glossary_Factory'
+	glossary_entries ,= '高速脱出艇'
+	glossary_entries ,= 'Glossary_EscapePod'
+	glossary_entries ,= 'コロニー'
+	glossary_entries ,= 'Glossary_Colony'
+	// サ行
+	glossary_entries ,= 'サバイバルキット'
+	glossary_entries ,= 'Glossary_SurvivalKit'
+	glossary_entries ,= 'シルフィード'
+	glossary_entries ,= 'Glossary_Sylpheed'
+	glossary_entries ,= '食料生産区画'
+	glossary_entries ,= 'Glossary_FoodProduction'
+	glossary_entries ,= '質量兵器'
+	glossary_entries ,= 'Glossary_KEW'
+	glossary_entries ,= '重力カタパルト'
+	glossary_entries ,= 'Glossary_GravityCatapult'
+	glossary_entries ,= '相転移エンジン'
+	glossary_entries ,= 'Glossary_PhaseTransitionEngine'
+	// サ行（続き）
+	glossary_entries ,= 'スクルド'
+	glossary_entries ,= 'Glossary_Sklud'
+	glossary_entries ,= 'スクルド級1番艦スクルド'
+	glossary_entries ,= 'Glossary_Sklud_Class_first_ship'
+	// タ行
+	glossary_entries ,= '多目的宗教施設'
+	glossary_entries ,= 'Glossary_ReligiousFacility'
+	glossary_entries ,= '中枢AI'
+	glossary_entries ,= 'Glossary_CentralAI'
+	glossary_entries ,= 'テラリウム'
+	glossary_entries ,= 'Glossary_Terrarium'
+	glossary_entries ,= '電磁投射砲'
+	glossary_entries ,= 'Glossary_Railgun'
+	// アルファベット
+	glossary_entries ,= 'CDC'
+	glossary_entries ,= 'Glossary_CDC'
+	// ナ行
+	glossary_entries ,= '覗き窓'
+	glossary_entries ,= 'Glossary_Nozokimado'
+	// ハ行
+	glossary_entries ,= 'ハードポイント'
+	glossary_entries ,= 'Glossary_HardPoint'
+	glossary_entries ,= '反物質エンジン'
+	glossary_entries ,= 'Glossary_AntimatterEngine'
+	glossary_entries ,= 'ブリッジ'
+	glossary_entries ,= 'Glossary_Bridge'
+	glossary_entries ,= 'ヘイムダル'
+	glossary_entries ,= 'Glossary_Heimdall'
+	glossary_entries ,= 'ホーミングレーザー'
+	glossary_entries ,= 'Glossary_HomingLaser'
+	glossary_entries ,= '補給船'
+	glossary_entries ,= 'Glossary_Supply_ship'
+}
 
+OnSystemUnload.Glossary : void
+{
+	ERASEVAR('glossary_entries')
+	ERASEVAR('glossary_page')
+}
+
+// 用語集メニュー（ページネーション対応）
 Menu_GLOSSARY
 {
-    "b2"
-    --
-    <<"
-    す０：用語集です。
-    ＠メニュー：エアロック｜Glossary_Airlock
-    ＠メニュー：オブザーベーションサテライト｜Glossary_ObservationSatellite
-    ＠メニュー：隔壁｜Glossary_Bulkhead
-    ＠メニュー：グラヴィティウィング｜Glossary_GravityWing
-    ＠メニュー：艦内スーツ｜Glosssay_ShipboardSuite
-    ＠メニュー：機関区画｜Glosssay_EngineUnit
-    ＠メニュー：コロニー｜Glossary_Colony
-    ＠メニュー：サバイバルキット｜Glossary_SurvivalKit
-    ＠メニュー：CDC｜Glossary_CDC
-    ＠メニュー：質量兵器｜Glossary_KEW
-    ＠メニュー：重力カタパルト｜Glossary_GravityCatapult
-    ＠メニュー：スクルド｜Glossary_Sklud
-    ＠メニュー：スクルド級1番艦スクルド｜Glossary_Sklud_Class_first_ship
-    ＠メニュー：艦載機｜Glossary_Ship_Aeroplane
-    ＠メニュー：中枢AI｜Glossary_CentralAI
-    ＠メニュー：覗き窓｜Glossary_Nozokimado
-    ＠メニュー：ハードポイント｜Glossary_HardPoint
-    ＠メニュー：補給船｜Glossary_Supply_ship
-    ＠改行多めメニュー：閉じる｜Menu_CLOSE
-    ">>
+	_total = ARRAYSIZE(glossary_entries) / 2
+	_max_page = (_total - 1) / GLOSSARY_PER_PAGE
+	if glossary_page < 0 { glossary_page = 0 }
+	if glossary_page > _max_page { glossary_page = _max_page }
+
+	_start = glossary_page * GLOSSARY_PER_PAGE
+	_end = _start + GLOSSARY_PER_PAGE
+	if _end > _total { _end = _total }
+
+	_result = "\b2\0\s[0]用語集です。"
+
+	for _i = _start ; _i < _end ; _i++
+	{
+		_result += AYATEMPLATE.MenuItem(glossary_entries[_i * 2], glossary_entries[_i * 2 + 1])
+	}
+
+	if glossary_page > 0
+	{
+		_result += AYATEMPLATE.MenuItem('前のページ', 'Glossary_PrevPage')
+	}
+	if glossary_page < _max_page
+	{
+		_result += AYATEMPLATE.MenuItem('次のページ', 'Glossary_NextPage')
+	}
+	_result += AYATEMPLATE.MenuItem('閉じる', 'Menu_CLOSE', 200)
+
+	_result + "\e"
+}
+
+// ページ送り
+Glossary_NextPage
+{
+	glossary_page += 1
+	Menu_GLOSSARY
+}
+
+Glossary_PrevPage
+{
+	glossary_page -= 1
+	Menu_GLOSSARY
 }
 
 // 艦内スーツ
-Glosssay_ShipboardSuite
+Glossary_ShipboardSuite
 {
     <<"
     す０：艦内で着用する標準的な服のことです。気密漏れが起きたときなどには簡易宇宙服になります。皆さん、スーツ自体にアレンジを加えたり、アウターや靴でお洒落を楽しんでいるようです。
@@ -41,7 +143,7 @@ Glosssay_ShipboardSuite
 }
 
 // 機関区画
-Glosssay_EngineUnit
+Glossary_EngineUnit
 {
     <<"
     す０：艦のエンジンのある区画です。エンジニアの方が日々、整備と改善を行っています。
@@ -112,7 +214,7 @@ Glossary_SurvivalKit
 Glossary_CDC
 {
     <<"
-    す０：Combat Direction Center、戦闘指揮所のことです。戦闘中の指揮や誘導のためのユニットで、各レーダーや艦載機の情報を集約・分析しています。
+    す０：Combat Direction Center、戦闘指揮所のことです。戦闘中は各レーダーや艦載機の情報を集約、分析し、指揮を執ります。艦の頭脳とでもいえばよいでしょうか。
     ＠改行多めメニュー：戻る｜Menu_GLOSSARY
     ">>
 }
@@ -121,8 +223,8 @@ Glossary_CDC
 Glossary_KEW
 {
     <<"
-    す０：重たい金属の棒を何かしらの手段で高速で射出する武器です。探知と迎撃が難しいのが特徴です。
-    改行なしす２１３：艦内では神からの杖と呼ばれているようです。
+    す０：大質量の金属塊や岩塊を高速で射出する兵装です。探知と迎撃が難しいのが特徴です。
+    改行なしす２１３：艦内では神からの杖と呼ばれているようです。……岩塊でもいいのでしょうか？
     ＠改行多めメニュー：戻る｜Menu_GLOSSARY
     ">>
 }
@@ -200,6 +302,134 @@ Glossary_Ship_Aeroplane
 {
     <<'
     す３００：全領域戦闘機「シルフィード」80機、警戒管制機「ヘイムダル」10機が稼働中です。どの子もハードとソフトで個人や任務に最適化されているので個性が出てますよ。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// 格納庫
+Glossary_Hangar
+{
+    <<'
+    す３００：艦載機を収容する区画です。発艦区画と隣接していて、整備班による機体のメンテナンスもここで行われます。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// グラヴィティシールド
+Glossary_GravityShield
+{
+    <<'
+    す３００：重力制御技術を応用した防御システムです。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// 工場区画
+Glossary_Factory
+{
+    <<'
+    す３００：武器や弾薬、艦を維持するために必要な部品から日用品まで、様々なものの生産を担う区画です。長期間の単独行動を支える重要な施設のひとつです。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// 高速脱出艇
+Glossary_EscapePod
+{
+    <<'
+    す３００：有事の際にクルーが退艦するための小型艇です。各区画に配備されています。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// シルフィード
+Glossary_Sylpheed
+{
+    <<'
+    す３００：この艦に搭載されている全領域戦闘機です。宇宙空間から大気圏内まであらゆる環境で運用できます。現在80機が稼働中です。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// 食料生産区画
+Glossary_FoodProduction
+{
+    <<'
+    す３００：植物工場や培養肉工場がある区画です。長期間の航行を支えるために、艦内で食料を生産しています。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// 相転移エンジン
+Glossary_PhaseTransitionEngine
+{
+    <<'
+    す３００：この艦の主機です。
+    改行なしす１４：詳しい原理についてはセキュリティクリアランスの関係上、お話しできません。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// 多目的宗教施設
+Glossary_ReligiousFacility
+{
+    <<'
+    す３００：クルーの信仰心を支えるための施設です。立体映像と可変構造の壁や床により、様々な儀式に対応できるようになっています。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// テラリウム
+Glossary_Terrarium
+{
+    <<'
+    す４００：進宙1周年記念にクルーの皆さんからいただきました。
+    改行なしす４１２：わたしにとってとても大事なものなんです。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// 電磁投射砲
+Glossary_Railgun
+{
+    <<'
+    す３００：この艦の主砲です。4門搭載されています。電磁力で弾体を高速射出する兵装です。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// 反物質エンジン
+Glossary_AntimatterEngine
+{
+    <<'
+    す３００：この艦の補機であり、主推進器でもあります。6基搭載されており、水や星間物質を対消滅させて推進力に変換しています。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// ブリッジ
+Glossary_Bridge
+{
+    <<'
+    す３００：艦橋です。航行や通信の指揮を行う管制区画の中核で、操舵・火器管制・通信の各担当が常駐しています。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// ヘイムダル
+Glossary_Heimdall
+{
+    <<'
+    す３００：この艦に搭載されている警戒管制機です。広域の索敵と艦載機の管制を担当しています。10機が運用中です。
+    ＠改行多めメニュー：戻る｜Menu_GLOSSARY
+    '>>
+}
+
+// ホーミングレーザー
+Glossary_HomingLaser
+{
+    <<'
+    す３００：この艦の副砲です。600門搭載されています。追尾機能を持つレーザー兵装です。
     ＠改行多めメニュー：戻る｜Menu_GLOSSARY
     '>>
 }
