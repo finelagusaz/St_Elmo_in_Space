@@ -100,7 +100,7 @@ Menu_GLOSSARY
 	_end = _start + GLOSSARY_PER_PAGE
 	if _end > _total { _end = _total }
 
-	_result = "\0\s[0]用語集です。"
+	_result = "\b2\0\s[0]用語集です。"
 
 	for _i = _start ; _i < _end ; _i++
 	{
