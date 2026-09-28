@@ -14,6 +14,22 @@ dicdir, yaya_base
 
 また、_loading_order.txt を編集することで、`yaya_base/optional.dic`を無効にしたり、`yaya_base/compatible.dic`を有効にすることが可能です。
 
+`yaya_base/lint.dic`は、読み込み済みの辞書から未定義・未使用の変数や関数を探す`SHIORI3FW.Lint.Run`を提供します（YAYA Tc574-1以降）。玉やtamacから`?? SHIORI3FW.Lint.Run`で呼び出せます。
+
+## 新規ゴーストを作る方へ
+
+全部盛りサンプルゴースト「紺野ややめ」
+
+https://github.com/YAYA-shiori/konnoyayame
+
+あやりりす/あやりりすEX簡易記法エンジンつき「紺野りりす」
+
+https://github.com/YAYA-shiori/ayalilith
+
+- [システム辞書内関数マニュアル](docs/manual_yaya_base.md)
+- [あやりりすマニュアル](docs/manual_aya_lilith.md)
+- [あやりりすEXマニュアル](docs/manual_aya_lilith_ex.md)
+
 ## ライセンス
 
 Public Domain (Unlicense)
