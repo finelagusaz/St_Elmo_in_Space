@@ -10,11 +10,16 @@ jobs:
   check:
     name: auto check
     runs-on: windows-latest
+    # The scripts of the skill are cloned from another repository; keep the token read-only
+    permissions:
+      contents: read
     steps:
       - name: checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          # Do not leave the token in .git where the cloned scripts could read it
+          persist-credentials: false
       - name: get ukagaka-developer
         # The scripts of the skill. To pin a version, add "--branch <tag or branch>" (see references/workflows/ci.md).
         shell: pwsh
